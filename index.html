@@ -40,7 +40,6 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <script>
         tailwind.config = {
             theme: {
@@ -107,38 +106,46 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
         .nav-orb-active { animation: orbPopOut 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
         .nav-text-active { animation: textSlideUp 0.4s ease-out forwards; animation-delay: 0.1s; }
 
+        /* 1. NUANSA GELAP (Midnight Gradient) */
         body.theme-dark { --c-brand-400: #a78bfa; --c-brand-500: #8b5cf6; --c-brand-600: #7c3aed; --c-accent-400: #818cf8; --c-accent-600: #4f46e5; background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%) fixed !important; color: #f8fafc !important; }
         body.theme-dark [class*="bg-slate-800"], body.theme-dark [class*="bg-slate-900"], body.theme-dark [class*="bg-slate-950"] { background: linear-gradient(145deg, #1e293b, #0f172a) !important; border-color: rgba(255, 255, 255, 0.05) !important; box-shadow: 0 10px 30px rgba(0,0,0,0.4) !important; backdrop-filter: none !important; }
         body.theme-dark header, body.theme-dark nav#bottomNav { background: linear-gradient(90deg, rgba(15, 23, 42, 0.95), rgba(30, 27, 75, 0.95)) !important; backdrop-filter: blur(10px) !important; border-color: rgba(139, 92, 246, 0.2) !important; }
 
+        /* 2. NUANSA TERANG (Clean Daylight Gradient) */
         body.theme-light { --c-brand-400: #60a5fa; --c-brand-500: #3b82f6; --c-brand-600: #2563eb; --c-accent-400: #38bdf8; --c-accent-600: #0284c7; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%) fixed !important; color: #0f172a !important; }
         body.theme-light [class*="bg-slate-800"], body.theme-light [class*="bg-slate-900"], body.theme-light [class*="bg-slate-950"] { background: linear-gradient(145deg, #ffffff, #f1f5f9) !important; border-color: #ffffff !important; box-shadow: 0 10px 30px rgba(0,0,0,0.05) !important; backdrop-filter: none !important; }
         body.theme-light header, body.theme-light nav#bottomNav { background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(241, 245, 249, 0.95)) !important; backdrop-filter: blur(12px) !important; border-color: #cbd5e1 !important; }
         body.theme-light [class*="text-white"]:not(button *), body.theme-light [class*="text-slate-100"]:not(button *), body.theme-light [class*="text-slate-300"]:not(button *), body.theme-light [class*="text-slate-400"] { color: #334155 !important; }
 
+        /* 3. NUANSA SENJA (Sunset Glow Gradient) */
         body.theme-sepia { --c-brand-400: #ea580c; --c-brand-500: #f97316; --c-brand-600: #c2410c; --c-accent-400: #f43f5e; --c-accent-600: #be123c; background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%) fixed !important; color: #431407 !important; }
         body.theme-sepia [class*="bg-slate-800"], body.theme-sepia [class*="bg-slate-900"], body.theme-sepia [class*="bg-slate-950"] { background: linear-gradient(145deg, #ffedd5, #fed7aa) !important; border-color: #fdba74 !important; box-shadow: 0 10px 20px rgba(234, 88, 12, 0.1) !important; backdrop-filter: none !important; }
         body.theme-sepia header, body.theme-sepia nav#bottomNav { background: linear-gradient(90deg, rgba(255, 237, 213, 0.95), rgba(254, 215, 170, 0.95)) !important; border-color: #fb923c !important; }
         body.theme-sepia [class*="text-white"]:not(button *), body.theme-sepia [class*="text-slate-100"]:not(button *), body.theme-sepia [class*="text-slate-300"]:not(button *), body.theme-sepia [class*="text-slate-400"] { color: #431407 !important; }
 
+        /* 4. NUANSA MONOKROM (OLED Silver Gradient) */
         body.theme-oled { --c-brand-400: #9ca3af; --c-brand-500: #6b7280; --c-brand-600: #4b5563; --c-accent-400: #d1d5db; --c-accent-600: #374151; background: radial-gradient(circle at top left, #1f2937 0%, #000000 100%) fixed !important; color: #ffffff !important; }
         body.theme-oled [class*="bg-slate-800"], body.theme-oled [class*="bg-slate-900"], body.theme-oled [class*="bg-slate-950"] { background: linear-gradient(145deg, #111827, #000000) !important; border: 1px solid #374151 !important; box-shadow: 0 8px 25px rgba(255,255,255,0.05) !important; backdrop-filter: none !important; }
         body.theme-oled header, body.theme-oled nav#bottomNav { background: linear-gradient(90deg, rgba(17, 24, 39, 0.95), rgba(0, 0, 0, 0.95)) !important; border-color: #4b5563 !important; }
 
+        /* 5. NUANSA KACA (Cosmic Glassmorphism) */
         body.theme-cosmic { --c-brand-400: #e879f9; --c-brand-500: #d946ef; --c-brand-600: #c026d3; --c-accent-400: #38bdf8; --c-accent-600: #0284c7; background: linear-gradient(135deg, #2e1065 0%, #831843 100%) fixed !important; color: #fdf4ff !important; }
         body.theme-cosmic [class*="bg-slate-800"], body.theme-cosmic [class*="bg-slate-900"], body.theme-cosmic [class*="bg-slate-950"] { background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%) !important; backdrop-filter: blur(20px) saturate(150%) !important; border: 1px solid rgba(255, 255, 255, 0.2) !important; box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.05), 0 8px 32px 0 rgba(0, 0, 0, 0.3) !important; }
         body.theme-cosmic header, body.theme-cosmic nav#bottomNav { background: linear-gradient(90deg, rgba(46, 16, 101, 0.7), rgba(131, 24, 67, 0.7)) !important; backdrop-filter: blur(20px) !important; border-color: rgba(232, 121, 249, 0.3) !important; }
 
+        /* 6. NUANSA ALAM (Forest Dew Gradient) */
         body.theme-forest { --c-brand-400: #34d399; --c-brand-500: #10b981; --c-brand-600: #059669; --c-accent-400: #fbbf24; --c-accent-600: #d97706; background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%) fixed !important; color: #064e3b !important; }
         body.theme-forest [class*="bg-slate-800"], body.theme-forest [class*="bg-slate-900"], body.theme-forest [class*="bg-slate-950"] { background: linear-gradient(145deg, #ffffff, #f0fdf4) !important; border-color: #a7f3d0 !important; box-shadow: 0 10px 25px rgba(5, 150, 105, 0.08) !important; backdrop-filter: none !important; }
         body.theme-forest header, body.theme-forest nav#bottomNav { background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(209, 250, 229, 0.95)) !important; border-color: #10b981 !important; }
         body.theme-forest [class*="text-white"]:not(button *), body.theme-forest [class*="text-slate-100"]:not(button *), body.theme-forest [class*="text-slate-300"]:not(button *), body.theme-forest [class*="text-slate-400"] { color: #064e3b !important; }
 
+        /* 7. NUANSA LAUT (Ocean Breeze Gradient) */
         body.theme-ocean { --c-brand-400: #38bdf8; --c-brand-500: #0ea5e9; --c-brand-600: #0284c7; --c-accent-400: #818cf8; --c-accent-600: #4f46e5; background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%) fixed !important; color: #0c4a6e !important; }
         body.theme-ocean [class*="bg-slate-800"], body.theme-ocean [class*="bg-slate-900"], body.theme-ocean [class*="bg-slate-950"] { background: linear-gradient(145deg, #ffffff, #f0f9ff) !important; border-color: #bae6fd !important; box-shadow: 0 8px 20px rgba(2, 132, 199, 0.08) !important; backdrop-filter: none !important; }
         body.theme-ocean header, body.theme-ocean nav#bottomNav { background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(224, 242, 254, 0.95)) !important; border-color: #0ea5e9 !important; }
         body.theme-ocean [class*="text-white"]:not(button *), body.theme-ocean [class*="text-slate-100"]:not(button *), body.theme-ocean [class*="text-slate-300"]:not(button *), body.theme-ocean [class*="text-slate-400"] { color: #0c4a6e !important; }
 
+        /* 8. NUANSA KOPI (Warm Mocha Gradient) */
         body.theme-sunset { --c-brand-400: #d6d3d1; --c-brand-500: #a8a29e; --c-brand-600: #78716c; --c-accent-400: #b45309; --c-accent-600: #78350f; background: linear-gradient(135deg, #fafaf9 0%, #f5f5f4 100%) fixed !important; color: #292524 !important; }
         body.theme-sunset [class*="bg-slate-800"], body.theme-sunset [class*="bg-slate-900"], body.theme-sunset [class*="bg-slate-950"] { background: linear-gradient(145deg, #ffffff, #fafaf9) !important; border-color: #e7e5e4 !important; box-shadow: 0 8px 20px rgba(120, 113, 108, 0.1) !important; backdrop-filter: none !important; }
         body.theme-sunset header, body.theme-sunset nav#bottomNav { background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(245, 245, 244, 0.95)) !important; border-color: #a8a29e !important; }
@@ -150,11 +157,13 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
         body.theme-lavender header, body.theme-lavender nav#bottomNav { background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(253, 242, 248, 0.95)) !important; border-color: #ec4899 !important; }
         body.theme-lavender [class*="text-white"]:not(button *), body.theme-lavender [class*="text-slate-100"]:not(button *), body.theme-lavender [class*="text-slate-300"]:not(button *), body.theme-lavender [class*="text-slate-400"] { color: #831843 !important; }
 
+        /* 10. NUANSA SOFT 3D (Neumorphism Holographic) */
         body.theme-neon { --c-brand-400: #94a3b8; --c-brand-500: #64748b; --c-brand-600: #475569; --c-accent-400: #38bdf8; --c-accent-600: #0284c7; background: #e2e8f0 !important; color: #334155 !important; }
         body.theme-neon [class*="bg-slate-800"], body.theme-neon [class*="bg-slate-900"], body.theme-neon [class*="bg-slate-950"] { background: linear-gradient(145deg, #f1f5f9, #cbd5e1) !important; border: none !important; box-shadow: 8px 8px 16px #94a3b8, -8px -8px 16px #ffffff !important; border-radius: 20px !important; backdrop-filter: none !important; }
         body.theme-neon header, body.theme-neon nav#bottomNav { background: linear-gradient(90deg, rgba(226, 232, 240, 0.9), rgba(203, 213, 225, 0.9)) !important; border: none !important; box-shadow: 4px 4px 10px #94a3b8, -4px -4px 10px #ffffff !important; }
         body.theme-neon [class*="text-white"]:not(button *), body.theme-neon [class*="text-slate-100"]:not(button *), body.theme-neon [class*="text-slate-300"]:not(button *), body.theme-neon [class*="text-slate-400"] { color: #334155 !important; }
 
+        /* KONTRAS TEKS BANNER: jangan biarkan warna teks menyatu dengan background terang */
         body.theme-neon .bg-slate-800\/80 h3,
         body.theme-neon .bg-slate-800\/80 p,
         body.theme-neon .bg-slate-800\/80 .text-white,
@@ -170,9 +179,11 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
             border-color: #cbd5e1 !important;
         }
 
+        /* OVERRIDE TEXT DAN ICON AGAR SELALU TERBACA DI TEMA TERANG */
         body.theme-light [class*="text-slate-"], body.theme-sepia [class*="text-slate-"], body.theme-forest [class*="text-slate-"], body.theme-ocean [class*="text-slate-"], body.theme-sunset [class*="text-slate-"], body.theme-lavender [class*="text-slate-"] { color: #475569 !important; }
         body.theme-light button [class*="text-slate-"], body.theme-sepia button [class*="text-slate-"], body.theme-forest button [class*="text-slate-"], body.theme-ocean button [class*="text-slate-"], body.theme-sunset button [class*="text-slate-"], body.theme-lavender button [class*="text-slate-"] { color: inherit !important; }
 
+        /* FIX: PASTIKAN DROPDOWN MENU BERADA PALING ATAS DENGAN EFEK BLUR / KACA */
         #themeDropdownList, #adPlacementList, #testiPlacementList, #social-dd-list, .social-dd-list {
             z-index: 99999 !important;
             background: rgba(30, 41, 59, 0.85) !important; /* Warna abu-abu gelap (Slate-800), tidak terlalu hitam, tidak terlalu bening */
@@ -182,6 +193,7 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
             border: 1px solid rgba(255, 255, 255, 0.15) !important;
         }
         
+        /* Ubah dropdown jadi terang otomatis jika pakai tema bernuansa terang */
         body.theme-light #themeDropdownList, body.theme-light #customStoreList, body.theme-light #adPlacementList, body.theme-light #testiPlacementList, body.theme-light #social-dd-list, body.theme-light .social-dd-list,
         body.theme-sepia #themeDropdownList, body.theme-sepia #customStoreList, body.theme-sepia #adPlacementList, body.theme-sepia #testiPlacementList, body.theme-sepia #social-dd-list, body.theme-sepia .social-dd-list,
         body.theme-forest #themeDropdownList, body.theme-forest #customStoreList, body.theme-forest #adPlacementList, body.theme-forest #testiPlacementList, body.theme-forest #social-dd-list, body.theme-forest .social-dd-list,
@@ -194,6 +206,7 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
             border-color: rgba(148, 163, 184, 0.45) !important;
         }
 
+        /* SOFT 3D: tombol tema dibuat halus, tidak memakai glow/ring besar */
         body.theme-neon .theme-btn-dark,
         body.theme-neon .theme-btn-light,
         body.theme-neon .theme-btn-sepia,
@@ -230,10 +243,15 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
             text-shadow: none !important;
         }
 
+        /* =========================================================
+           SOFT 3D - SEMUA TOMBOL AKSI TIDAK BOLEH GELAP
+           ========================================================= */
+
         body.theme-neon button {
             color: #334155 !important;
         }
         
+        /* KECUALI TOMBOL AKSI UTAMA YANG BERWARNA SOLID, TEKS & IKONNYA HARUS PUTIH */
         body.theme-neon button.bg-brand-600,
         body.theme-neon button.bg-emerald-600,
         body.theme-neon button.bg-sky-600,
@@ -242,9 +260,10 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
         body.theme-neon button.bg-blue-600,
         body.theme-neon button.bg-rose-600,
         body.theme-neon button[class*="bg-gradient-to-"] {
-            color: #ffffff !important;
+            color: #000000 !important;
         }
 
+        /* Tombol dengan background slate dibuat menjadi tombol Soft 3D */
         body.theme-neon button.bg-slate-700,
         body.theme-neon button.bg-slate-800,
         body.theme-neon button.bg-slate-900 {
@@ -256,6 +275,7 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
                 -4px -4px 8px rgba(255, 255, 255, 0.90) !important;
         }
 
+        /* Hover */
         body.theme-neon button.bg-slate-700:hover,
         body.theme-neon button.bg-slate-800:hover,
         body.theme-neon button.bg-slate-900:hover {
@@ -267,11 +287,13 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
                 -5px -5px 10px rgba(255, 255, 255, 0.95) !important;
         }
 
+        /* Tombol aksi kecil */
         body.theme-neon button[class*="bg-slate-"] i,
         body.theme-neon button[class*="bg-slate-"] span {
             color: inherit !important;
         }
 
+        /* Jangan biarkan tombol batal menjadi hitam/gelap */
         body.theme-neon .bg-slate-600,
         body.theme-neon .bg-slate-700,
         body.theme-neon .bg-slate-800,
@@ -279,12 +301,14 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
             --tw-bg-opacity: 1;
         }
 
+        /* Input/select tetap berbeda dari tombol */
         body.theme-neon input,
         body.theme-neon textarea,
         body.theme-neon select {
             color: #334155 !important;
         }
 
+        /* KOREKSI WARNA AKSEN ICONS & BADGE SAAT MODE TERANG/SEPIA/NEON */
         body.theme-light .text-brand-400, body.theme-sepia .text-brand-400, body.theme-forest .text-brand-400, body.theme-ocean .text-brand-400, body.theme-neon .text-brand-400 { color: var(--c-brand-700) !important; }
         body.theme-light .text-emerald-400, body.theme-sepia .text-emerald-400, body.theme-forest .text-emerald-400, body.theme-ocean .text-emerald-400, body.theme-neon .text-emerald-400 { color: #059669 !important; }
         body.theme-light .text-rose-400, body.theme-sepia .text-rose-400, body.theme-forest .text-rose-400, body.theme-ocean .text-rose-400, body.theme-neon .text-rose-400 { color: #e11d48 !important; }
@@ -292,6 +316,7 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
         body.theme-light .text-sky-400, body.theme-sepia .text-sky-400, body.theme-forest .text-sky-400, body.theme-ocean .text-sky-400, body.theme-neon .text-sky-400 { color: #0284c7 !important; }
         body.theme-light .text-indigo-400, body.theme-sepia .text-indigo-400, body.theme-forest .text-indigo-400, body.theme-ocean .text-indigo-400, body.theme-neon .text-indigo-400 { color: #4f46e5 !important; }
         
+        /* FIX WARNA TEXT INPUT & KOTAK DI TEMA TERANG */
         body.theme-light input, body.theme-light textarea, body.theme-light select,
         body.theme-sepia input, body.theme-sepia textarea, body.theme-sepia select,
         body.theme-forest input, body.theme-forest textarea, body.theme-forest select,
@@ -304,6 +329,7 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
         body.theme-light .text-white, body.theme-sepia .text-white, body.theme-forest .text-white, body.theme-ocean .text-white { color: #0f172a !important; }
         body.theme-light .bg-slate-800 .text-white, body.theme-light button .text-white { color: #ffffff !important; }
 
+        /* FIX NAVBAR BAWAH AGAR SOLID & JELAS DI SEMUA TEMA */
         .nav-orb-active { 
             background: linear-gradient(
                 145deg,
@@ -316,6 +342,7 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
                 -4px -4px 10px rgba(255, 255, 255, 0.75) !important;
         }
 
+        /* KHUSUS NUANSA SOFT 3D */
         body.theme-neon .nav-orb-active {
             background: linear-gradient(
                 145deg,
@@ -329,11 +356,13 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
                 -6px -6px 12px #ffffff !important;
         }
 
+        /* Icon aktif Soft 3D */
         body.theme-neon .nav-orb-active i {
             color: #0284c7 !important;
             text-shadow: none !important;
         }
 
+        /* Teks aktif Soft 3D */
         body.theme-neon .nav-orb-active span {
             color: #334155 !important;
         }
@@ -349,6 +378,7 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
         .social-dd-btn { cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent; text-align: left; }
         .social-dd-item { cursor: pointer; -webkit-tap-highlight-color: transparent; }
 
+        /* MODAL PETUNJUK MOBILE: aman dari header dan bottom navbar */
         @media (max-width: 639px) {
             #modalPetunjuk {
                 padding-top: calc(68px + env(safe-area-inset-top));
@@ -371,6 +401,7 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
             }
         }
 
+        /* MODAL KONFIRMASI SELALU PALING ATAS */
         #customConfirmModal {
             z-index: 100000 !important;
         }
@@ -392,6 +423,7 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
             z-index: 9999 !important;
         }
 
+        /* Backdrop harus benar-benar berada di atas seluruh UI */
         #productFormModal > .absolute.inset-0,
         #profileFormModal > .absolute.inset-0,
         #testiAdminModal > .absolute.inset-0,
@@ -400,6 +432,7 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
             z-index: 0 !important;
         }
 
+        /* Kotak modal berada di atas backdrop */
         #productFormBox,
         #profileFormBox,
         #testiAdminBox,
@@ -409,6 +442,7 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
             z-index: 1 !important;
         }
 
+        /* Mobile dan desktop: jangan memberi ruang khusus untuk navbar */
         #productFormModal,
         #profileFormModal,
         #testiAdminModal,
@@ -418,6 +452,7 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
             padding-bottom: 16px !important;
         }
 
+        /* Desktop tetap lega, tanpa mengubah layout yang sudah ada */
         @media (min-width: 640px) {
             #modalPetunjuk #petunjukBox {
                 max-height: min(90vh, 760px);
@@ -1466,12 +1501,12 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
                                 <span id="detailRating">5.0</span>
                             </div>
                             <span>|</span>
-                            <span>Terjual <strong class="text-slate-200" id="detailSold">0</strong></span>
+                            <span>Terjual <strong class="text-base-700" id="detailSold">0</strong></span>
                             <span>|</span>
                             <span class="text-emerald-400 font-medium whitespace-nowrap" id="detailStock">Stok Tersedia</span>
                         </div>
                         <div class="mt-4 md:mt-5">
-                            <h4 class="font-semibold text-xs md:text-sm text-slate-200 mb-2">Deskripsi Produk</h4>
+                            <h4 class="font-bold text-xs md:text-sm text-base mb-2">Deskripsi Produk</h4>
                             <p class="text-[11px] md:text-sm text-slate-400 leading-relaxed whitespace-pre-wrap" id="detailDesc">Deskripsi...</p>
                         </div>
                     </div>
@@ -1488,7 +1523,7 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
                         </div>
 
                         <!-- Tombol Tambah ke Keranjang -->
-                        <button type="button" id="modalAddToCartBtn" onclick="addToCartCurrent(event, this)" class="flex-grow bg-gradient-to-r from-brand-600 to-indigo-600 text-white font-semibold rounded-xl md:rounded-2xl shadow-lg shadow-brand-600/30 hover:from-brand-500 hover:to-indigo-500 transition-all duration-300 flex items-center justify-center gap-2 text-xs md:text-sm py-3 h-11 md:h-[52px]">
+                        <button type="button" id="modalAddToCartBtn" onclick="addToCartCurrent(event, this)" class="flex-grow bg-gradient-to-r from-brand-600 to-indigo-600 text-black font-semibold rounded-xl md:rounded-2xl shadow-lg shadow-brand-600/30 hover:from-brand-500 hover:to-indigo-500 transition-all duration-300 flex items-center justify-center gap-2 text-xs md:text-sm py-3 h-11 md:h-[52px]">
                             <i class="fa-solid fa-cart-shopping"></i> <span id="modalCartText">Tambah ke Keranjang</span>
                         </button>
                     </div>
@@ -1772,6 +1807,7 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
 
     <!-- SCRIPT UTAMA -->
     <script>
+        // --- INDEXEDDB ENGINE ---
         const DB_NAME = 'TokoSayaDB';
         const STORE_NAME = 'keyval';
         function initDB() {
@@ -1791,11 +1827,13 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
             try { const db = await initDB(); return new Promise((res, rej) => { const tx = db.transaction(STORE_NAME, 'readonly'); const req = tx.objectStore(STORE_NAME).get(key); req.onsuccess = () => res(req.result); req.onerror = () => rej(req.error); }); } catch(e) { return undefined; }
         }
 
+        // --- DATA DB START ---
         let products = [{"id":1788087375372,"name":"Ubah Nama Toko QRIS Merchant — Proses Cepat ±1 Menit!","category":"Poster","price":"Rp 25.000","origPrice":"Rp 40.000","rating":"5.0","badge":"Hot","sold":"1703","stockType":"angka","stockQty":"2","desc":"Punya QRIS tapi nama toko masih nama lama? Bisa kami bantu sesuaikan dengan nama usaha Anda. 😊\n✅ Proses cepat, estimasi ±1 menit\n✅ Nama toko dapat disesuaikan\n✅ Bisa request logo di tengah QRIS\n✅ Tersedia contoh QRIS trial yang bisa langsung dicoba\n✅ Bisa untuk berbagai jenis usaha/merchant\n✅ Garansi layanan sesuai ketentuan\n\n📌 Mau lihat contoh QRIS trial dulu? Silakan coba sebelum memutuskan.\n\n💬 BEBAS TANYA-TANYA!\nBisa langsung DM atau WhatsApp kami untuk konsultasi dan melihat contoh hasilnya.","images":["https://i.ibb.co.com/FbmQs51v/a5474a2c3532.png"],"isBanner":true,"isVisible":true,"allowMultipleQty":true,"videoUrl":""},{"id":1788086252294,"name":"Maze Quest - Balapan Labirin Seru","category":"Games","price":"Rp 25.000","origPrice":"Rp 57.000","rating":"5.0","badge":"Hot","sold":"341","stockType":"tersedia","stockQty":"0","desc":"🏁 JALUR LABIRIN — BALAPAN SERU, SIAPA YANG PALING CEPAT? 🏆\n\nBosan dengan permainan yang itu-itu saja? Saatnya adu kecepatan dan strategi dalam Jalur Labirin! 🌀\n\nAplikasi permainan interaktif yang memungkinkan beberapa peserta berlomba melewati labirin dari START hingga FINISH. Setiap peserta akan berusaha menemukan jalur terbaik dan menjadi yang tercepat!\n\n✨ FITUR LENGKAP:\n👥 Tambah & kelola banyak peserta\n🧩 Berbagai tingkat kesulitan labirin\n🎨 Pilihan berbagai bentuk labirin\n🏆 Penentuan hadiah Juara 1, 2 & 3\n⏱️ Timer pertandingan secara real-time\n📊 Leaderboard berdasarkan waktu tercepat\n😀 Kustomisasi ikon setiap peserta\n🎁 Kustomisasi ikon hadiah\n🖥️ Mode Fullscreen untuk pengalaman bermain lebih maksimal\n💾 Data tersimpan otomatis di perangkat\n📱 Responsive — dapat digunakan di HP, tablet, maupun laptop/PC\n🌐 Bisa dimainkan secara offline\n\n🎯 Cocok untuk:\n• Games & hiburan acara\n• Perlombaan antar peserta\n• Kegiatan sekolah\n• Kegiatan komunitas\n• Gathering & family event\n• Ice breaking\n• Acara kantor\n• Atau sekadar seru-seruan bersama teman 😎\n\n🔥 TENTUKAN PESERTA → PILIH LABIRIN → ATUR HADIAH → MULAI BALAPAN!\n\nSiapa yang paling cepat menemukan jalan keluar?\n\n🏆 JADILAH YANG TERCEPAT. TAKLUKKAN LABIRIN. RAIH KEMENANGAN!\n\n#JalurLabirin #MazeGame #GameOffline #GamesSeru #GameInteraktif #GamesAcara #IceBreaking #GamesSekolah #GamesKomunitas #Leaderboard #DigitalGame","images":["https://i.ibb.co.com/39Fm59Bx/20abd6f47d3d.png"],"isBanner":true,"isVisible":true,"allowMultipleQty":false,"videoUrl":"https://youtube.com/shorts/7aCPP2-cvXM?si=v7sNs_ISs1DLC472"},{"id":1785513890704,"name":"Store App - Aplikasi Toko Penjualan Produk All in One","category":"Aplikasi","price":"Rp 127.000","origPrice":"Rp 550.000","rating":"5.0","badge":"Hot","sold":"739","stockType":"tersedia","stockQty":"0","desc":"Aplikasi Website Offline Siap Pakai Solusi Cepat untuk Digitalisasi Bisnis Anda\nKelola bisnis lebih mudah dengan aplikasi berbasis website yang berjalan secara offline di localhost, tanpa membutuhkan koneksi internet saat digunakan. Cocok untuk UMKM, toko, jasa, percetakan, sekolah, maupun berbagai jenis usaha lainnya.\nDilengkapi dengan tampilan modern, mudah digunakan, dan fitur lengkap untuk membantu operasional bisnis menjadi lebih cepat, rapi, dan efisien.\nKeunggulan\n💻 Berjalan 100% Offline (Localhost)\n⚡ Cepat & Ringan\n🔒 Data Tersimpan di Komputer Anda\n📱 Tampilan Responsif\n🛠️ Mudah Digunakan & Dikelola\n📊 Fitur Lengkap Sesuai Kebutuhan Bisnis\n🔄 Dapat Dikembangkan & Dikustom Sesuai Permintaan","images":["https://i.ibb.co.com/hxvFB1WJ/582e1757e886.png"],"isBanner":true,"isHidden":true,"isVisible":true,"allowMultipleQty":false,"videoUrl":""},{"id":1785513626451,"name":"QR & BARCODE","category":"Aplikasi","price":"Rp 25.000","origPrice":"Rp 50.000","rating":"4.0","badge":"Hot","sold":"76","stockType":"tersedia","stockQty":"0","desc":"IaiaQR & Barcode Generator Pro adalah aplikasi berbasis website yang memudahkan pembuatan QR Code dan Barcode secara cepat, praktis, dan profesional. Berjalan 100% offline tanpa instalasi maupun koneksi internet, aplikasi ini dilengkapi berbagai fitur seperti penambahan logo, kustomisasi desain, pengaturan warna dan ukuran, serta ekspor hasil berkualitas tinggi. Seluruh proses dilakukan langsung di perangkat sehingga data tetap aman dan privasi pengguna terjaga. Cocok digunakan untuk kebutuhan bisnis, toko, UMKM, digital printing, inventaris, pembayaran QRIS, hingga keperluan pribadi.\nKeunggulan QR & Barcode Generator Pro\n📶 100% Offline – Dapat digunakan tanpa koneksi internet.\n🔒 Privasi Terjamin – Seluruh data diproses langsung di perangkat.\n⚡ Cepat & Praktis – Membuat QR Code dan Barcode hanya dalam hitungan detik.\n💻 Tanpa Instalasi – Langsung dijalankan melalui browser.\n🔳 Mendukung QR Code & Barcode – Berbagai kebutuhan dalam satu aplikasi.\n🖼️ Tambahkan Logo – Sisipkan logo agar QR Code terlihat lebih profesional.\n🎨 Kustomisasi Desain – Atur warna, gaya, dan ukuran sesuai kebutuhan.\n📤 Ekspor Berkualitas Tinggi – Simpan hasil dengan kualitas tajam dan siap digunakan.\n📱 Responsif di Semua Perangkat – Nyaman digunakan di desktop, laptop, tablet, maupun smartphone.\n🎯 Mudah Digunakan – Antarmuka sederhana yang cocok untuk pemula maupun profesional.\n🚀 Ringan & Efisien – Performa cepat tanpa membebani perangkat.\n🛡️ Cocok untuk Berbagai Kebutuhan – QRIS, label produk, kemasan, inventaris, tiket, website, media sosial, promosi, dan kebutuhan bisnis lainnya.","images":["https://i.ibb.co.com/PvBLMsC2/903877782d33.png"],"isBanner":true,"isVisible":true,"allowMultipleQty":false,"videoUrl":""},{"id":1785513298367,"name":"DevTools Pro Ofline","category":"Aplikasi","price":"Rp 30.000","origPrice":"Rp 57.000","rating":"3.9","badge":"Hot","sold":"85","stockType":"tersedia","stockQty":"0","desc":"Deskripsi DevTools Pro\nDevTools Pro adalah aplikasi berbasis website yang dirancang untuk membantu developer, programmer, dan praktisi IT dalam mengelola, mengamankan, serta memproses kode dan data dengan lebih cepat. Berjalan 100% offline tanpa instalasi dan tanpa koneksi internet, aplikasi ini menyediakan berbagai alat penting seperti Obfuscator, Encrypt & Decrypt, Encode & Decode, serta String Tools dalam satu aplikasi yang ringan, praktis, dan mudah digunakan. Seluruh proses dilakukan langsung di perangkat sehingga keamanan dan privasi data tetap terjaga.\nKeunggulan DevTools Pro\n🔒 100% Offline – Digunakan tanpa koneksi internet.\n🛡️ Privasi Terjamin – Seluruh data diproses langsung di perangkat.\n⚡ Cepat & Ringan – Performa optimal tanpa membebani sistem.\n💻 Tanpa Instalasi – Langsung dijalankan melalui browser.\n🔐 Obfuscator – Menyamarkan source code agar lebih sulit dibaca dan disalin.\n🔑 Encrypt & Decrypt – Mendukung berbagai algoritma enkripsi untuk mengamankan data.\n🔄 Encode & Decode – Mendukung Base64, URL, HTML, Hex, dan format lainnya.\n🔤 String Tools – Beragam alat untuk memanipulasi teks dengan cepat dan efisien.\n📱 Responsif – Nyaman digunakan di desktop, laptop, tablet, maupun smartphone.\n🚀 Antarmuka Modern – Desain sederhana, bersih, dan mudah dipahami.\n🎯 Praktis – Semua kebutuhan pengolahan kode dan data tersedia dalam satu aplikasi.\nCocok digunakan untuk: Developer Web, Programmer, Mahasiswa IT, Cyber Security Enthusiast, Pentester, System Administrator, serta siapa saja yang membutuhkan alat pengolah kode dan keamanan data secara offline.","images":["https://i.ibb.co.com/SXBCPfDG/30200e3d710b.png"],"isBanner":true,"isVisible":true,"allowMultipleQty":false},{"id":1785513134554,"name":"Pixel Studio Pro Ofline","category":"Aplikasi","price":"Rp 25.000","origPrice":"Rp 44.000","rating":"5.0","badge":"Hot","sold":"396","stockType":"tersedia","stockQty":"0","desc":"PixelStudio Pro adalah aplikasi editor gambar berbasis website yang dapat dijalankan langsung di browser tanpa instalasi dan tanpa koneksi internet. Cocok untuk desainer grafis, percetakan, UMKM, content creator, hingga pengguna umum yang membutuhkan proses crop, edit, dan ekspor gambar dengan cepat, praktis, dan tetap menjaga privasi karena seluruh proses dilakukan langsung di perangkat.\nKonsep Poster 1:1\nHeadline\nPIXELSTUDIO PRO\nEditor Gambar Offline Profesional\nTagline\nCepat • Praktis • 100% Offline\nFitur Unggulan\n✂️ Crop Gambar Presisi\n📐 Rasio 1:1, 4:3, 16:9, 9:16 & Custom (cm)\n🔄 Rotate, Zoom, Reset\n↩️ Undo & Redo\n🎨 Background Transparan, Putih & Gradient\n👀 Preview Sebelum Download\n🖼️ Riwayat Hasil Edit\n💾 Export PNG, JPG & WEBP\n🔒 Privasi Aman, Diproses di Perangkat\n🌐 Berjalan Langsung di Browser (Offline)\nKeunggulan\n✅ Tanpa Internet\n✅ Tanpa Instalasi\n✅ Ringan & Cepat\n✅ Responsive Desktop & Mobile\n✅ Data Tidak Keluar dari Perangkat\nCocok Untuk\nDigital Printing\nDesainer Grafis\nContent Creator\nFotografer\nUMKM\nPelajar & Mahasiswa","images":["https://i.ibb.co.com/Hfxw4nWT/10d9cec2b992.png"],"isBanner":true,"isVisible":true,"allowMultipleQty":false,"videoUrl":""},{"id":1785512074594,"name":"Broadcast Pelanggan Pro","category":"Aplikasi","price":"Rp 299.000","origPrice":"Rp 399.000","rating":"4.7","badge":"Hot","sold":"211","stockType":"tersedia","stockQty":"0","desc":"Broadcast Pelanggan Pro adalah aplikasi berbasis website offline yang membantu Anda mengelola data pelanggan dan melakukan pengiriman pesan WhatsApp secara massal melalui API provider pilihan. Dilengkapi dengan manajemen kontak, template pesan, import/export Excel, backup & restore database, serta pengaturan jeda pengiriman sehingga proses promosi, pemberitahuan, maupun layanan pelanggan menjadi lebih cepat, rapi, dan efisien.\n\nBroadcast Pelanggan Pro\nKelola Kontak & Kirim Pesan Massal Lebih Cepat dan Praktis\n🚀 Fitur Unggulan\n✅ Berjalan 100% Offline\n✅ Tanpa Instalasi & Tanpa Server\n✅ Manajemen Data Kontak Pelanggan\n✅ Import Kontak dari Excel\n✅ Export Data ke Excel\n✅ Backup & Restore Database JSON\n✅ Master Template Pesan\n✅ Multi Template Broadcast\n✅ Master Provider API WhatsApp\n✅ Pilih Provider Aktif\n✅ Broadcast ke Banyak Kontak Sekaligus\n✅ Pengaturan Jeda Pengiriman\n✅ Edit & Hapus Kontak dengan Mudah\n✅ Penyimpanan Data Menggunakan LocalStorage\n✅ Tampilan Modern, Ringan & Responsif\n\n🎯 Cocok Untuk\nDigital Printing\nToko Retail\nDistributor\nUMKM\nToko Online\nCustomer Service\nMarketing\nSales Promotion\n⭐ Keunggulan\nMempermudah pengelolaan database pelanggan.\nBroadcast pesan lebih cepat dan terorganisir.\nMendukung template pesan agar lebih efisien.\nData tersimpan aman di perangkat sendiri.\nTidak memerlukan internet untuk menjalankan aplikasi (internet hanya diperlukan saat mengirim melalui API WhatsApp). ","images":["https://i.ibb.co.com/tPppK8bm/5a524146ac1f.png"],"isBanner":true,"isVisible":true,"allowMultipleQty":false,"videoUrl":""},{"id":1785511818449,"name":"AI Print ERP Pro Ofline","category":"Aplikasi","price":"Rp 50.000","origPrice":"Rp 279.000","rating":"5.0","badge":"Best Seller","sold":"407","stockType":"tersedia","stockQty":"0","desc":"AI Print ERP Pro merupakan aplikasi ERP berbasis website offline yang dirancang khusus untuk membantu usaha percetakan dalam mengelola proses produksi. Mulai dari menghitung biaya cetak, mengelola data mesin, bahan, plat, finishing, membuat SPK, invoice, hingga backup dan ekspor database ke Excel. Seluruh data disimpan secara lokal menggunakan LocalStorage sehingga aplikasi dapat digunakan kapan saja tanpa membutuhkan internet maupun server.\n\nAI Print ERP Pro\nKelola Produksi Percetakan Lebih Cepat, Akurat, dan Profesional\n🚀 Fitur Unggulan\n✅ Berjalan 100% Offline (Tanpa Internet)\n✅ Tanpa Instalasi & Tanpa Server\n✅ Kalkulator HPP & Harga Jual Percetakan\n✅ Perhitungan Mesin Offset & Digital\n✅ Database Mesin, Plano, Plat, Bahan & Finishing\n✅ Kelola Riwayat Order Produksi\n✅ Cetak SPK Otomatis\n✅ Cetak Invoice Profesional\n✅ Backup & Restore Database\n✅ Auto Backup Riwayat Data\n✅ Import & Export Database Excel\n✅ Manajemen Versi Database\n✅ Penyimpanan Aman Menggunakan LocalStorage\n🎯 Cocok Untuk\nDigital Printing\nPercetakan Offset\nPercetakan Kemasan\nPercetakan Buku\nPercetakan Umum\nUsaha Grafika\n⭐ Keunggulan\nPerhitungan produksi lebih cepat dan minim kesalahan.\nSemua data tersimpan langsung di perangkat.\nTidak memerlukan koneksi internet.\nAntarmuka modern, ringan, dan mudah digunakan.\nMembantu menghitung biaya produksi hingga dokumen kerja secara otomatis. ","images":["https://i.ibb.co.com/gL2K8V3K/30ed23f615ab.png"],"isBanner":true,"isVisible":true,"allowMultipleQty":false},{"id":1785511316152,"name":"Lembur Pro Ofline","category":"Aplikasi","price":"Rp 144.000","origPrice":"Rp 200.000","rating":"4.0","badge":"Hot","sold":"13","stockType":"tersedia","stockQty":"0","desc":"Lembur Pro adalah aplikasi berbasis website offline yang dirancang untuk mempermudah pencatatan, pengelolaan, dan monitoring data lembur karyawan secara praktis. Seluruh data tersimpan langsung di perangkat menggunakan LocalStorage sehingga dapat digunakan tanpa internet maupun server. Aplikasi ini cocok untuk perusahaan, pabrik, percetakan, toko, UMKM, hingga instansi yang ingin mengelola lembur dengan lebih rapi dan profesional.\n\nLEMBUR PRO\nKelola Data Lembur Karyawan Jadi Lebih Mudah & Profesional\nFitur Unggulan\n✅ Berjalan 100% Offline\n✅ Tanpa Internet & Tanpa Server\n✅ Login Admin & Karyawan\n✅ Input Jam Masuk, Pulang & Istirahat\n✅ Perhitungan Durasi Lembur Otomatis\n✅ Riwayat Lembur Lengkap\n✅ Persetujuan (ACC) Lembur\n✅ Kelola Data Karyawan\n✅ Dashboard Statistik & Grafik\n✅ Export Excel\n✅ Backup & Restore Data JSON\n✅ Import Data Excel\n✅ Multi Perusahaan / Multi Lisensi\n✅ Hak Akses Super Admin & Admin\n✅ Data Aman Tersimpan di Perangkat\nTagline\nSolusi Praktis Manajemen Lembur Tanpa Ribet\nFooter\nCocok untuk Perusahaan • UMKM • Pabrik • Percetakan • Toko • Instansi","images":["https://i.ibb.co.com/b5kStTSL/10661e629498.png"],"isBanner":true,"isVisible":true,"allowMultipleQty":false,"videoUrl":""},{"id":1785510022763,"name":"N-Up Pro Offline","category":"Aplikasi","price":"Rp 57.000","origPrice":"Rp 200.000","rating":"5.0","badge":"Hot","sold":"91","stockType":"tersedia","stockQty":"0","desc":"N-Up Pro adalah aplikasi berbasis website offline yang dirancang untuk mempermudah proses penyusunan beberapa halaman PDF atau gambar ke dalam satu lembar cetak. Dilengkapi fitur N-Up, Booklet, pengaturan margin, bleed, crop mark, auto resize, serta preview hasil sebelum dicetak. Tidak memerlukan internet, server, maupun instalasi sehingga dapat langsung digunakan kapan saja di komputer atau laptop.\n\nN-Up Pro\nSolusi Praktis Mengatur Layout Cetak PDF & Gambar Secara Offline\nIsi Poster\nFitur Unggulan\n✅ Berjalan 100% Offline (Tanpa Internet)\n✅ Tanpa Instalasi & Tanpa Server\n✅ Import File PDF, JPG & PNG\n✅ Mode N-Up (2, 4, 6, 8, dst.)\n✅ Mode Booklet Otomatis\n✅ Pengaturan Margin Presisi\n✅ Bleed & Crop Mark\n✅ Auto Resize Kertas\n✅ Rotate 180° Baris Bawah\n✅ Preview Hasil Sebelum Export\n✅ Export ke PDF & JPG\n✅ Tampilan Modern & Responsif\nCocok Untuk\nPercetakan Digital\nFotokopi\nOffset Printing\nSekolah & Kampus\nPerkantoran\nPelaku Usaha Percetakan\nKeunggulan\nHemat waktu proses layout cetak.\nPresisi tinggi untuk kebutuhan produksi.\nMudah digunakan bahkan untuk pemula.\nSemua proses dilakukan langsung di browser secara offline.","images":["https://i.ibb.co.com/TqLjZ3CS/9ff85dacfbe2.png"],"isBanner":true,"isVisible":true,"allowMultipleQty":false,"videoUrl":""},{"id":1785506304355,"name":"Galeri Showcase Offline","category":"Aplikasi","price":"Rp 100.000","origPrice":"Rp 186.000","rating":"4.7","badge":"Hot","sold":"72","stockType":"tersedia","stockQty":"0","desc":"Galeri Showcase Offline\nTampilkan Profil Anggota Lebih Profesional & Menarik\n\nCocok untuk Sekolah • Kampus • Bimbel • Perusahaan • Komunitas • Organisasi\n\nFitur Unggulan\n✅ Berjalan 100% Offline (Tanpa Internet)\n✅ Tidak Perlu Hosting & Database\n✅ Data Tersimpan Otomatis di LocalStorage\n✅ Tema Tampilan Siap Pakai\n✅ Upload Logo & Background Sendiri\n✅ Kelola Foto Anggota dengan Mudah\n✅ Custom Ikon & Sponsor\n✅ Download Hasil Menjadi Gambar\n✅ Share Langsung ke Media Sosial\n✅ Responsive Desktop & Mobile\n✅ Semua Data Tersimpan di Satu File HTML\n\nFooter\nPraktis • Ringan • Siap Digunakan • Sekali Beli, Pakai Selamanya","images":["https://i.ibb.co.com/v4RYMSWD/69c0b55d7ea6.png"],"isBanner":true,"isVisible":true,"allowMultipleQty":false},{"id":1785341744639,"name":"Cicilan Pro","category":"Aplikasi","price":"Rp 57.000","origPrice":"Rp 110.000","rating":"4.3","badge":"Hot","sold":"27","stockType":"tersedia","stockQty":"0","desc":"Cicilan Pro\n\nKelola seluruh cicilan Anda dengan lebih mudah, rapi, dan aman dalam satu aplikasi. Cocok untuk mencatat cicilan kendaraan, elektronik, pinjaman pribadi, kartu kredit, hingga berbagai jenis angsuran lainnya.\n\nKeunggulan Utama\n\n- ✅ Berjalan 100% Offline tanpa koneksi internet.\n- ✅ Data tersimpan langsung di perangkat sehingga lebih aman dan privat.\n- ✅ Dashboard informatif untuk melihat total cicilan, tagihan, pembayaran, dan sisa kewajiban.\n- ✅ Pengingat jatuh tempo agar tidak terlambat membayar.\n- ✅ Pantau progres pembayaran secara real-time.\n- ✅ Filter dan pencarian data yang cepat.\n- ✅ Riwayat cicilan tersusun rapi.\n- ✅ Laporan dapat diekspor ke format Excel (XLSX).\n- ✅ Tampilan modern, ringan, dan mudah digunakan.\n\nCocok Digunakan Untuk\n\n- Kredit Motor & Mobil\n- Kredit HP & Laptop\n- Kredit Peralatan Elektronik\n- Pinjaman Pribadi\n- Kartu Kredit\n- Cicilan Furniture\n- Dan berbagai jenis cicilan lainnya.\n\nMengapa Memilih Cicilan Pro?\n\nDengan sistem offline, Anda tetap dapat menggunakan seluruh fitur kapan saja tanpa internet. Tidak perlu khawatir kehilangan akses saat jaringan bermasalah. Data tetap aman di perangkat Anda, aplikasi berjalan cepat, ringan, dan tanpa biaya langganan bulanan.\n\nCicilan Pro membantu Anda mengatur keuangan lebih disiplin, menghindari keterlambatan pembayaran, serta memantau seluruh cicilan dalam satu aplikasi yang praktis dan mudah digunakan.","images":["https://i.ibb.co.com/whq4WVR3/220c4d86910a.png"],"isBanner":true,"isVisible":true,"allowMultipleQty":false,"videoUrl":""},{"id":1785257374536,"name":"Kasir Offline","category":"Aplikasi","price":"Rp 100.000","origPrice":"Rp 350.000","rating":"5.0","badge":"Best Seller","sold":"371","stockType":"tersedia","stockQty":"0","desc":"Aplikasi ini cocok untuk toko, minimarket, percetakan, konter HP, cafe, laundry, dan berbagai jenis usaha lainnya.\n\n✅ 100% Offline (tanpa internet) \n✅ Tanpa server & hosting \n✅ Tanpa biaya berlangganan \n✅ Responsive Desktop & Mobile \n✅ Data tersimpan otomatis di perangkat Anda \n✅ Akun Admin & Kasir \n✅ Laporan, stok, invoice, backup & masih banyak fitur lainnya.","images":["https://i.ibb.co.com/rRp2byC8/5a3db5420b99.png","https://i.ibb.co.com/spXNmnN7/f6ddcadf3ef5.png","https://i.ibb.co.com/cSwGNRN5/81abf8ce6932.jpg","https://i.ibb.co.com/Myddw03G/efd912f3d9be.jpg","https://i.ibb.co.com/qMfz057G/eca59e8d4af6.png","https://i.ibb.co.com/PZGRgsbX/a346ae8e4f94.png","https://i.ibb.co.com/HfyNvQM7/c47797660f0c.jpg","https://i.ibb.co.com/4ZbNp5ZZ/7bb34b01ad84.jpg"],"isBanner":true,"isVisible":true,"allowMultipleQty":false,"videoUrl":"https://youtu.be/vGLTuvnGRvk?si=JTWOteVuXrQhmcuZ"}];
         let profile = {"name":"CodeOn Apps","email":"appscodeon@gmail.com","status":"Aktif","initial":"CO","logo":"https://i.ibb.co.com/WN05twYw/fb1b6dbbcb42.png","whatsapp":"085172288904","logoOriginal":"https://i.ibb.co.com/wFBjsbmT/5ff6f0500a4c.png","logoCropData":{"x":-82.7048239086077,"y":-105.99873559285338,"width":1618.6896220043404,"height":1618.6896220043404,"rotate":0,"scaleX":1,"scaleY":1},"description":"CodeOn Apps menyediakan aplikasi bisnis, aplikasi kasir offline, source code website, QRIS, dan berbagai produk digital.\nFitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai selamanya!","faviconUrl":"https://i.ibb.co.com/DDqDVMG2/e0b969f877e6.png","tagline":"Source Code Digital & Aplikasi ","domainUrl":"https://codeonapps.github.io","gaId":"G-86C3FJ9CKD","defaultTheme":"neon","payWA":true,"payTransfer":true,"qrisRaw":"00020101021126690021ID.CO.BANKMANDIRI.WWW01189360000801363657770211713636577750303UKE51440014ID.CO.QRIS.WWW0215ID10232808795950303UKE5204274153033605802ID5920Digital Printing IND6015Indramayu (Kab)61054527462070703A0163041E93","payQRIS":true,"socials":[{"icon":"fa-youtube","url":"https://youtube.com/@codeonapps"},{"icon":"fa-tiktok","url":"https://tiktok.com/@codeonapps"},{"icon":"fa-facebook","url":"https://www.facebook.com/@codeonapps"}],"footerText":"CodeOn Apps","isLandingPage":false,"showBannerSection":true,"showTestiSection":true,"creatorName":"Ridwan","creatorUrl":"https://digitalprintingind.github.io","address":"","colorTheme":"midnight"};
         let banners = [{"id":"1787786196815","label":"Description","title":"About Me","desc":"CodeOn Apps menyediakan aplikasi bisnis, aplikasi kasir offline, source code website, QRIS, dan berbagai produk digital.\nFitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai selamanya!","images":["https://i.ibb.co.com/zTczhs3j/7533eb92f43f.png"]}];
         let testimonials = [{"id":1785934807388,"name":"Maya","message":"Jarang nemu developer lokal yang jual produk sebagus ini dengan harga miring. Fiturnya sekelas aplikasi premium. Jangan ragu beli di sini! 😍","isVisible":true},{"id":1785934775297,"name":"Koperasi Warga","message":"Sistem pendataan jadi lebih rapi sejak pakai aplikasi dari CodeOn. Laporan bulanannya detail banget dan bisa langsung di-export.","isVisible":true},{"id":1785934748087,"name":"Denny","message":"Aplikasinya minim error. Kemarin ada kendala cetak struk thermal, lapor ke admin langsung dikasih panduan setting printernya hari itu juga. Keren! 🚀","isVisible":true},{"id":1785934714713,"name":"Optik Sejahtera","message":"Sudah coba banyak aplikasi kasir, tapi ini yang paling pas di hati. Tanpa langganan bulanan, beli sekali pakai selamanya. Sangat hemat.","isVisible":true},{"id":1785934681344,"name":"Siska","message":"Proses order via WA-nya cepet. Adminnya ramah dan ngasih solusi yang pas buat kebutuhan pembukuan toko baju saya. ✨","isVisible":true},{"id":1785934650113,"name":"Reza Fahlevi","message":"Beli script di sini gak pernah ngecewain. Kodenya bersih (clean code) dan gampang dimodifikasi lagi buat project kampus. Thank you!","isVisible":true},{"id":1785934619589,"name":"Kang Mus (Warkop)","message":"Mantul! Transaksi jadi lebih cepet. Yang paling penting database aman karena tersimpan offline di PC kita sendiri. 💯","isVisible":true},{"id":1785934583545,"name":"H. Rohman","message":"Lembur Pro ngebantu banget buat ngurus absen dan lembur karyawan pabrik saya. Hitungannya akurat, gak perlu repot pakai Excel lagi.","isVisible":true},{"id":1785934544116,"name":"Dina Lestari","message":"Suka banget sama desain UI aplikasinya, rapi dan modern. Klien saya juga puas sama hasilnya. Nanti pasti order produk digital yang lain.","isVisible":true},{"id":1785934503402,"name":"Fajar Setiawan","message":"Checkout gampang, akses file langsung dikirim. Gak pake ribet nunggu lama. Aplikasinya juga ringan pas dijalankan di laptop jadul. 💻","isVisible":true},{"id":1785934440682,"name":"Toko Berkah","message":"Harga sangat terjangkau untuk fitur selengkap ini. Udah dipakai seminggu di minimarket dan gak ada bug sama sekali. Recommended!","isVisible":true},{"id":1785934410829,"name":"Andi Wijaya","message":"Adminnya fast respon banget! Kemarin ada kendala pas setting awal, langsung dipandu via WA sampai tuntas. Pelayanan bintang 5 ⭐⭐⭐⭐⭐","isVisible":true},{"id":1785934378838,"name":"CV. Maju Bersama","message":"Fitur QRIS offline-nya juara. Sangat fungsional dan UI-nya juga responsif. Sukses terus buat developernya. 🔥\"","isVisible":true},{"id":"1785934338294","name":"Rina Amelia","message":"Awalnya ragu beli source code di sini, ternyata panduannya super lengkap. tanpa Instalasi gampang banget buat pemula. Terima kasih CodeOn!","isVisible":true},{"id":1785934079784,"name":"Budi Santoso","message":"Aplikasi kasir offline-nya beneran ngebantu warung saya. Gak perlu mikir kuota internet lagi buat rekap jualan tiap hari. Mantap mas! 👍","isVisible":true}];
         let adsData = [];
+        // --- DATA DB END ---
 
         let cart = [];
         let wishlist = [];
@@ -1837,6 +1875,7 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
         let activeBanners = [];
         let isDashboardSliding = false;
 
+        // --- PASTE DI SINI: FUNGSI YANG DISELAMATKAN ---
         function updateActiveBanners() {
             // Slider atas tetap normal (menggabungkan banner & produk pilihan)
             const productBanners = products.filter(p => p.isBanner).map(p => ({
@@ -1851,6 +1890,7 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
             activeBanners = [...visibleBanners, ...productBanners];
         }
 
+        // --- SISTEM TEMPEL TEKS QRIS (CLIPBOARD) ---
         async function pasteQrisText() {
             try {
                 const text = await navigator.clipboard.readText();
@@ -2712,7 +2752,7 @@ function moveBanner(id, dir) {
                                         <img src="${thumb}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out">
                                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
                                         <div class="absolute top-3 left-3 flex gap-1.5 z-20">
-                                            <span class="bg-brand-500 text-white text-[9px] font-bold px-2.5 py-1 rounded-full shadow-md uppercase tracking-wider">${b.label}</span>
+                                            <span class="bg-rose-500 text-white text-[9px] font-bold px-2.5 py-1 rounded-full shadow-md uppercase tracking-wider">${b.label}</span>
                                             ${banImgs.length > 1 ? `<span class="bg-slate-900/80 backdrop-blur text-white text-[9px] font-bold px-2 py-1 rounded-full border border-slate-600 shadow-md flex items-center gap-1"><i class="fa-regular fa-images"></i> ${banImgs.length}</span>` : ''}
                                         </div>
                                     </div>
