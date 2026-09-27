@@ -15,7 +15,7 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
     <meta property="og:title" id="ogTitle" content="CodeOn Apps | Source Code Digital & Aplikasi ">
     <meta property="og:description" id="ogDesc" content="CodeOn Apps menyediakan aplikasi bisnis, aplikasi kasir offline, source code website, QRIS, dan berbagai produk digital.
 Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai selamanya!">
-    <meta property="og:image" id="ogImage" content="https://i.ibb.co.com/d0nc2gJc/a01be39194f1.png">
+    <meta property="og:image" id="ogImage" content="https://i.ibb.co.com/MkvtPKcc/88cfef1d6166.png">
     <meta property="og:type" content="website">
     <meta property="og:url" id="ogUrl" content="https://codeonapps.github.io/">
     <meta property="og:site_name" content="CodeOn Apps">
@@ -97,12 +97,8 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
         }
 
         @keyframes navActiveIcon { 0% { transform: translateY(0) scale(1); } 50% { transform: translateY(-6px) scale(1.25); } 100% { transform: translateY(-4px) scale(1.15); } }
-        @keyframes navActivePill { 0% { transform: scale(0.6); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
-        @keyframes navActiveLine { 0% { transform: translate(-50%, -100%); opacity: 0; } 100% { transform: translate(-50%, 0); opacity: 1; } }
 
         .nav-icon-active { animation: navActiveIcon 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
-        .nav-pill-active { animation: navActivePill 0.3s ease-out forwards; }
-        .nav-line-active { animation: navActiveLine 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
 
         @keyframes orbPopOut { 0% { transform: translateY(15px) scale(0.3); opacity: 0; } 50% { transform: translateY(-30px) scale(1.1); opacity: 1; } 100% { transform: translateY(-26px) scale(1); opacity: 1; } }
         @keyframes textSlideUp { 0% { transform: translateY(10px); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
@@ -139,6 +135,158 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
         body.theme-neon .bg-slate-800\/80 {
             background: linear-gradient(145deg, #f8fafc, #e2e8f0) !important;
             border-color: #cbd5e1 !important;
+        }
+
+        /* 11. NUANSA SOFT UI (Koreksi Mutlak Warna Ikon Kecil & Teks Tombol Terang) */
+        body.theme-softui { 
+            --c-brand-400: #38bdf8; 
+            --c-brand-500: #0284c7; 
+            --c-brand-600: #0369a1; 
+            background: #f1f5f9 !important; 
+            color: #0f172a !important; 
+        }
+        
+        /* 1. KARTU UTAMA (Gradasi Cyan ke Ungu Pekat, Radius 16px) */
+        body.theme-softui [class*="bg-slate-800"] { 
+            background: linear-gradient(135deg, #00d2ff 0%, #9933ff 100%) !important; 
+            border: 1px solid rgba(255, 255, 255, 0.4) !important; 
+            border-radius: 16px !important; 
+            box-shadow: 0 10px 30px rgba(153, 51, 255, 0.25) !important; 
+            backdrop-filter: none !important; 
+        }
+        
+        /* 2. AREA DALAM / TEMPAT GAMBAR DI DALAM KARTU */
+        body.theme-softui [class*="bg-slate-800"] div[class*="bg-slate-900"], 
+        body.theme-softui [class*="bg-slate-800"] img[class*="bg-slate-900"],
+        body.theme-softui [class*="bg-slate-800"] div[class*="bg-slate-950"],
+        body.theme-softui [class*="bg-slate-800"] .bg-slate-900\/20 {
+            background: rgba(255, 255, 255, 0.2) !important;
+            border: 1px solid rgba(255, 255, 255, 0.3) !important;
+            border-radius: 12px !important;
+            box-shadow: none !important;
+        }
+        
+        /* 3. MATIKAN GLOW */
+        body.theme-softui .blur-2xl, body.theme-softui .blur-3xl { display: none !important; }
+        
+        /* 4. HEADER PROFIL */
+        body.theme-softui .h-28.sm\:h-36.bg-gradient-to-r {
+            background: linear-gradient(135deg, #00d2ff, #9933ff) !important; 
+            box-shadow: inset 0 -4px 10px rgba(255,255,255,0.4) !important;
+        }
+        body.theme-softui .bg-slate-800\/50 { background: transparent !important; box-shadow: none !important; border: none !important; }
+        
+        /* 5. NAVBAR ATAS (HEADER) & BAWAH */
+        body.theme-softui header, body.theme-softui nav#bottomNav { 
+            background: rgba(255, 255, 255, 0.95) !important; 
+            border-top: 1px solid rgba(226, 232, 240, 0.8) !important;
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8) !important;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05) !important; 
+            backdrop-filter: blur(16px) !important; 
+        }
+        body.theme-softui header *, body.theme-softui header {
+            color: #000000 !important;
+        }
+        
+        /* 6. PAKSA SEMUA JUDUL & TEKS DI LUAR KARTU MENJADI HITAM PEKAT */
+        body.theme-softui main h1, 
+        body.theme-softui main h2, 
+        body.theme-softui main h3, 
+        body.theme-softui main h4, 
+        body.theme-softui main h5,
+        body.theme-softui section h1,
+        body.theme-softui section h2,
+        body.theme-softui section h3,
+        body.theme-softui div:not([class*="bg-slate-800"]) > h1,
+        body.theme-softui div:not([class*="bg-slate-800"]) > h2,
+        body.theme-softui div:not([class*="bg-slate-800"]) > h3,
+        body.theme-softui .text-slate-100, 
+        body.theme-softui .text-slate-300, 
+        body.theme-softui .text-slate-400 {
+            color: #000000 !important; 
+        }
+        
+        /* 7. KHUSUS IKON DI LUAR KARTU (SEPERTI IKON MEGAPHONE PROMO) DIPAKSA HITAM */
+        body.theme-softui div:not([class*="bg-slate-800"]) i,
+        body.theme-softui div:not([class*="bg-slate-800"]) svg,
+        body.theme-softui section i,
+        body.theme-softui section svg {
+            color: #000000 !important;
+            fill: #000000 !important;
+        }
+        
+        /* 8. KHUSUS TEKS DI DALAM KARTU UTAMA (DIJAMIN TETAP PUTIH TERANG) */
+        body.theme-softui [class*="bg-slate-800"] h1,
+        body.theme-softui [class*="bg-slate-800"] h2, 
+        body.theme-softui [class*="bg-slate-800"] h3, 
+        body.theme-softui [class*="bg-slate-800"] h4, 
+        body.theme-softui [class*="bg-slate-800"] h5,
+        body.theme-softui [class*="bg-slate-800"] p, 
+        body.theme-softui [class*="bg-slate-800"] span:not(.nav-orb-active span),
+        body.theme-softui [class*="bg-slate-800"] td { 
+            color: #ffffff !important; 
+        }
+        
+        /* 9. TOMBOL UTAMA, TOMBOL CS, & KOLOM INPUT */
+        body.theme-softui button { border-radius: 12px !important; }
+        
+        /* Tombol aksi khusus berlatar terang (seperti tombol Mulai Obrolan / Tanya CS) dipaksa teksnya HITAM */
+        body.theme-softui button:not(.bg-brand-600):not([class*="bg-gradient-to-"]):not(.nav-orb-active) {
+            color: #000000 !important;
+        }
+        body.theme-softui button:not(.bg-brand-600):not([class*="bg-gradient-to-"]):not(.nav-orb-active) * {
+            color: #000000 !important;
+            fill: #000000 !important;
+        }
+
+        /* Tombol utama bergradasi (tetap putih) */
+        body.theme-softui button.bg-brand-600, body.theme-softui button[class*="bg-gradient-to-"] { 
+            background: linear-gradient(145deg, #0284c7, #9333ea) !important; 
+            color: #ffffff !important; 
+            border: none !important;
+        }
+        body.theme-softui button.bg-brand-600 *, body.theme-softui button[class*="bg-gradient-to-"] * {
+            color: #ffffff !important;
+        }
+
+        body.theme-softui button[class*="bg-slate-"] { 
+            background: rgba(255, 255, 255, 0.9) !important; 
+            border: 1px solid rgba(203, 213, 225, 1) !important; 
+            color: #000000 !important;
+        }
+        body.theme-softui input, body.theme-softui textarea, body.theme-softui select { 
+            background: rgba(255, 255, 255, 0.95) !important; 
+            border: 1px solid rgba(203, 213, 225, 1) !important; 
+            color: #000000 !important; 
+            border-radius: 12px !important;
+        }
+        body.theme-softui input::placeholder, body.theme-softui textarea::placeholder {
+            color: #475569 !important;
+        }
+        
+        /* 10. NAVBAR BAWAH (PAKSA PUTIH BERSIH UNTUK IKON & TEKS AKTIF) */
+        body.theme-softui nav#bottomNav button:not(.nav-orb-active) span {
+            color: #000000 !important; 
+        }
+        body.theme-softui .nav-orb-active { 
+            background: linear-gradient(135deg, #0284c7, #9333ea) !important; 
+            box-shadow: 0 4px 15px rgba(147, 51, 234, 0.4) !important;
+            border: none !important; 
+        }
+        /* Memaksa teks putih */
+        body.theme-softui .nav-orb-active span,
+        body.theme-softui .nav-orb-active * { 
+            color: #ffffff !important; 
+            font-weight: 700 !important; 
+        }
+        /* Membalikkan warna ikon hitam menjadi putih bersih menggunakan filter CSS */
+        body.theme-softui .nav-orb-active i,
+        body.theme-softui .nav-orb-active svg,
+        body.theme-softui .nav-orb-active img {
+            filter: brightness(0) invert(1) !important;
+            color: #ffffff !important;
+            fill: #ffffff !important;
+            stroke: #ffffff !important;
         }
 
         /* FIX: PASTIKAN DROPDOWN MENU BERADA PALING ATAS DENGAN EFEK BLUR / KACA */
@@ -331,11 +479,6 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
             z-index: 1 !important;
         }
 
-        /* =========================================================
-           FIX ADMIN MODAL - HARUS MENUTUP NAVBAR ATAS & BAWAH
-           Dibuat mengikuti level Popup Banner
-           ========================================================= */
-
         #productFormModal,
         #profileFormModal,
         #testiAdminModal,
@@ -378,6 +521,11 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
             #modalPetunjuk #petunjukBox {
                 max-height: min(90vh, 760px);
             }
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
         }
     </style>
 
@@ -1212,7 +1360,7 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
             <!-- Ikon / Logo Tengah dengan Animasi Bouncing -->
             
                     <div class="relative h-20 sm:h-24 flex items-center justify-center mb-6 transform animate-bounce overflow-visible">
-                        <img src="https://i.ibb.co.com/d0nc2gJc/a01be39194f1.png" class="h-full w-auto max-w-[200px] object-contain drop-shadow-[0_15px_25px_rgba(139,92,246,0.6)]">
+                        <img src="https://i.ibb.co.com/MkvtPKcc/88cfef1d6166.png" class="h-full w-auto max-w-[200px] object-contain drop-shadow-[0_15px_25px_rgba(139,92,246,0.6)]">
                     </div>
         </div>
         
@@ -1224,12 +1372,6 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
             <div class="absolute inset-y-0 left-0 bg-gradient-to-r from-brand-500 to-indigo-400 rounded-full animate-[shimmer_1.5s_infinite] w-full" style="animation: shimmer 1.5s infinite linear; background-size: 200% 100%;"></div>
         </div>
     </div>
-    <style>
-        @keyframes shimmer {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
-        }
-    </style>
 
     <!-- TOP NAVBAR -->
     <header class="sticky top-0 z-[200] bg-slate-900/80 backdrop-blur-xl border-b-2 border-brand-500/40 shadow-lg shadow-brand-500/20 rounded-b-2xl sm:rounded-b-3xl">
@@ -1261,10 +1403,10 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
                     <!-- ISI DROPDOWN (HANYA 10 TEMA UTAMA) -->
                     <div id="themeDropdownList" class="absolute right-0 top-full mt-3 w-64 bg-slate-800/95 backdrop-blur-xl border border-slate-600 rounded-2xl shadow-2xl overflow-hidden hidden transform origin-top-right transition-all z-[99999] p-4">
                         <p class="text-[9px] sm:text-[10px] text-slate-400 font-bold mb-2.5 uppercase tracking-wider"><i class="fa-solid fa-palette mr-1"></i> Pilihan Nuansa UI/UX</p>
-                        <div class="grid grid-cols-2 gap-2 mb-2">
+                        <div class="grid grid-cols-3 gap-2 mb-2">
                             <button onclick="setUserTheme('dark')" class="theme-btn-dark py-2 bg-slate-900 border border-slate-700 hover:border-brand-500 rounded-xl text-[10px] sm:text-xs text-white flex items-center justify-center gap-1.5 transition shadow-sm"><i class="fa-solid fa-moon text-indigo-400"></i> N. Gelap</button>
-
                             <button onclick="setUserTheme('neon')" class="theme-btn-neon py-2 bg-slate-900 border border-slate-700 hover:border-brand-500 rounded-xl text-[10px] sm:text-xs text-white flex items-center justify-center gap-1.5 transition shadow-sm"><i class="fa-solid fa-cubes text-slate-400"></i> N. Soft 3D</button>
+							<button onclick="setUserTheme('softui')" class="theme-btn-softui py-2 bg-slate-900 border border-slate-700 hover:border-brand-500 rounded-xl text-[10px] sm:text-xs text-white flex items-center justify-center gap-1.5 transition shadow-sm"><i class="fa-solid fa-layer-group text-indigo-400"></i> Soft UI</button>
                         </div>
                     </div>
                 </div>
@@ -1473,8 +1615,6 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
             <!-- Konten Popup Banner Dinamis via JS -->
         </div>
     </div>
-
-    
 
     <!-- MODAL POPUP DETAIL TESTIMONI -->
     <div id="testiPopupModal" class="fixed inset-0 z-[80] hidden opacity-0 transition-opacity duration-300 flex items-center justify-center bg-slate-950/95 p-4 backdrop-blur-md" onclick="closeTestiPopup()">
@@ -1739,8 +1879,8 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
 
         // --- DATA DB START ---
         let products = [{"id":1788087375372,"name":"Ubah Nama Toko QRIS Merchant — Proses Cepat ±1 Menit!","category":"Poster","price":"Rp 25.000","origPrice":"Rp 40.000","rating":"5.0","badge":"Hot","sold":"1703","stockType":"angka","stockQty":"2","desc":"Punya QRIS tapi nama toko masih nama lama? Bisa kami bantu sesuaikan dengan nama usaha Anda. 😊\n✅ Proses cepat, estimasi ±1 menit\n✅ Nama toko dapat disesuaikan\n✅ Bisa request logo di tengah QRIS\n✅ Tersedia contoh QRIS trial yang bisa langsung dicoba\n✅ Bisa untuk berbagai jenis usaha/merchant\n✅ Garansi layanan sesuai ketentuan\n\n📌 Mau lihat contoh QRIS trial dulu? Silakan coba sebelum memutuskan.\n\n💬 BEBAS TANYA-TANYA!\nBisa langsung DM atau WhatsApp kami untuk konsultasi dan melihat contoh hasilnya.","images":["https://i.ibb.co.com/FbmQs51v/a5474a2c3532.png"],"isBanner":true,"isVisible":true,"allowMultipleQty":true,"videoUrl":""},{"id":1788086252294,"name":"Maze Quest - Balapan Labirin Seru","category":"Games","price":"Rp 25.000","origPrice":"Rp 57.000","rating":"5.0","badge":"Hot","sold":"341","stockType":"tersedia","stockQty":"0","desc":"🏁 JALUR LABIRIN — BALAPAN SERU, SIAPA YANG PALING CEPAT? 🏆\n\nBosan dengan permainan yang itu-itu saja? Saatnya adu kecepatan dan strategi dalam Jalur Labirin! 🌀\n\nAplikasi permainan interaktif yang memungkinkan beberapa peserta berlomba melewati labirin dari START hingga FINISH. Setiap peserta akan berusaha menemukan jalur terbaik dan menjadi yang tercepat!\n\n✨ FITUR LENGKAP:\n👥 Tambah & kelola banyak peserta\n🧩 Berbagai tingkat kesulitan labirin\n🎨 Pilihan berbagai bentuk labirin\n🏆 Penentuan hadiah Juara 1, 2 & 3\n⏱️ Timer pertandingan secara real-time\n📊 Leaderboard berdasarkan waktu tercepat\n😀 Kustomisasi ikon setiap peserta\n🎁 Kustomisasi ikon hadiah\n🖥️ Mode Fullscreen untuk pengalaman bermain lebih maksimal\n💾 Data tersimpan otomatis di perangkat\n📱 Responsive — dapat digunakan di HP, tablet, maupun laptop/PC\n🌐 Bisa dimainkan secara offline\n\n🎯 Cocok untuk:\n• Games & hiburan acara\n• Perlombaan antar peserta\n• Kegiatan sekolah\n• Kegiatan komunitas\n• Gathering & family event\n• Ice breaking\n• Acara kantor\n• Atau sekadar seru-seruan bersama teman 😎\n\n🔥 TENTUKAN PESERTA → PILIH LABIRIN → ATUR HADIAH → MULAI BALAPAN!\n\nSiapa yang paling cepat menemukan jalan keluar?\n\n🏆 JADILAH YANG TERCEPAT. TAKLUKKAN LABIRIN. RAIH KEMENANGAN!\n\n#JalurLabirin #MazeGame #GameOffline #GamesSeru #GameInteraktif #GamesAcara #IceBreaking #GamesSekolah #GamesKomunitas #Leaderboard #DigitalGame","images":["https://i.ibb.co.com/39Fm59Bx/20abd6f47d3d.png"],"isBanner":true,"isVisible":true,"allowMultipleQty":false,"videoUrl":"https://youtube.com/shorts/7aCPP2-cvXM?si=v7sNs_ISs1DLC472"},{"id":1785513890704,"name":"Store App - Aplikasi Toko Penjualan Produk All in One","category":"Aplikasi","price":"Rp 127.000","origPrice":"Rp 550.000","rating":"5.0","badge":"Hot","sold":"739","stockType":"tersedia","stockQty":"0","desc":"Aplikasi Website Offline Siap Pakai Solusi Cepat untuk Digitalisasi Bisnis Anda\nKelola bisnis lebih mudah dengan aplikasi berbasis website yang berjalan secara offline di localhost, tanpa membutuhkan koneksi internet saat digunakan. Cocok untuk UMKM, toko, jasa, percetakan, sekolah, maupun berbagai jenis usaha lainnya.\nDilengkapi dengan tampilan modern, mudah digunakan, dan fitur lengkap untuk membantu operasional bisnis menjadi lebih cepat, rapi, dan efisien.\nKeunggulan\n💻 Berjalan 100% Offline (Localhost)\n⚡ Cepat & Ringan\n🔒 Data Tersimpan di Komputer Anda\n📱 Tampilan Responsif\n🛠️ Mudah Digunakan & Dikelola\n📊 Fitur Lengkap Sesuai Kebutuhan Bisnis\n🔄 Dapat Dikembangkan & Dikustom Sesuai Permintaan","images":["https://i.ibb.co.com/hxvFB1WJ/582e1757e886.png"],"isBanner":true,"isHidden":true,"isVisible":true,"allowMultipleQty":false,"videoUrl":""},{"id":1785513626451,"name":"QR & BARCODE","category":"Aplikasi","price":"Rp 25.000","origPrice":"Rp 50.000","rating":"4.0","badge":"Hot","sold":"76","stockType":"tersedia","stockQty":"0","desc":"IaiaQR & Barcode Generator Pro adalah aplikasi berbasis website yang memudahkan pembuatan QR Code dan Barcode secara cepat, praktis, dan profesional. Berjalan 100% offline tanpa instalasi maupun koneksi internet, aplikasi ini dilengkapi berbagai fitur seperti penambahan logo, kustomisasi desain, pengaturan warna dan ukuran, serta ekspor hasil berkualitas tinggi. Seluruh proses dilakukan langsung di perangkat sehingga data tetap aman dan privasi pengguna terjaga. Cocok digunakan untuk kebutuhan bisnis, toko, UMKM, digital printing, inventaris, pembayaran QRIS, hingga keperluan pribadi.\nKeunggulan QR & Barcode Generator Pro\n📶 100% Offline – Dapat digunakan tanpa koneksi internet.\n🔒 Privasi Terjamin – Seluruh data diproses langsung di perangkat.\n⚡ Cepat & Praktis – Membuat QR Code dan Barcode hanya dalam hitungan detik.\n💻 Tanpa Instalasi – Langsung dijalankan melalui browser.\n🔳 Mendukung QR Code & Barcode – Berbagai kebutuhan dalam satu aplikasi.\n🖼️ Tambahkan Logo – Sisipkan logo agar QR Code terlihat lebih profesional.\n🎨 Kustomisasi Desain – Atur warna, gaya, dan ukuran sesuai kebutuhan.\n📤 Ekspor Berkualitas Tinggi – Simpan hasil dengan kualitas tajam dan siap digunakan.\n📱 Responsif di Semua Perangkat – Nyaman digunakan di desktop, laptop, tablet, maupun smartphone.\n🎯 Mudah Digunakan – Antarmuka sederhana yang cocok untuk pemula maupun profesional.\n🚀 Ringan & Efisien – Performa cepat tanpa membebani perangkat.\n🛡️ Cocok untuk Berbagai Kebutuhan – QRIS, label produk, kemasan, inventaris, tiket, website, media sosial, promosi, dan kebutuhan bisnis lainnya.","images":["https://i.ibb.co.com/PvBLMsC2/903877782d33.png"],"isBanner":true,"isVisible":true,"allowMultipleQty":false,"videoUrl":""},{"id":1785513298367,"name":"DevTools Pro Ofline","category":"Aplikasi","price":"Rp 30.000","origPrice":"Rp 57.000","rating":"3.9","badge":"Hot","sold":"85","stockType":"tersedia","stockQty":"0","desc":"Deskripsi DevTools Pro\nDevTools Pro adalah aplikasi berbasis website yang dirancang untuk membantu developer, programmer, dan praktisi IT dalam mengelola, mengamankan, serta memproses kode dan data dengan lebih cepat. Berjalan 100% offline tanpa instalasi dan tanpa koneksi internet, aplikasi ini menyediakan berbagai alat penting seperti Obfuscator, Encrypt & Decrypt, Encode & Decode, serta String Tools dalam satu aplikasi yang ringan, praktis, dan mudah digunakan. Seluruh proses dilakukan langsung di perangkat sehingga keamanan dan privasi data tetap terjaga.\nKeunggulan DevTools Pro\n🔒 100% Offline – Digunakan tanpa koneksi internet.\n🛡️ Privasi Terjamin – Seluruh data diproses langsung di perangkat.\n⚡ Cepat & Ringan – Performa optimal tanpa membebani sistem.\n💻 Tanpa Instalasi – Langsung dijalankan melalui browser.\n🔐 Obfuscator – Menyamarkan source code agar lebih sulit dibaca dan disalin.\n🔑 Encrypt & Decrypt – Mendukung berbagai algoritma enkripsi untuk mengamankan data.\n🔄 Encode & Decode – Mendukung Base64, URL, HTML, Hex, dan format lainnya.\n🔤 String Tools – Beragam alat untuk memanipulasi teks dengan cepat dan efisien.\n📱 Responsif – Nyaman digunakan di desktop, laptop, tablet, maupun smartphone.\n🚀 Antarmuka Modern – Desain sederhana, bersih, dan mudah dipahami.\n🎯 Praktis – Semua kebutuhan pengolahan kode dan data tersedia dalam satu aplikasi.\nCocok digunakan untuk: Developer Web, Programmer, Mahasiswa IT, Cyber Security Enthusiast, Pentester, System Administrator, serta siapa saja yang membutuhkan alat pengolah kode dan keamanan data secara offline.","images":["https://i.ibb.co.com/SXBCPfDG/30200e3d710b.png"],"isBanner":true,"isVisible":true,"allowMultipleQty":false},{"id":1785513134554,"name":"Pixel Studio Pro Ofline","category":"Aplikasi","price":"Rp 25.000","origPrice":"Rp 44.000","rating":"5.0","badge":"Hot","sold":"396","stockType":"tersedia","stockQty":"0","desc":"PixelStudio Pro adalah aplikasi editor gambar berbasis website yang dapat dijalankan langsung di browser tanpa instalasi dan tanpa koneksi internet. Cocok untuk desainer grafis, percetakan, UMKM, content creator, hingga pengguna umum yang membutuhkan proses crop, edit, dan ekspor gambar dengan cepat, praktis, dan tetap menjaga privasi karena seluruh proses dilakukan langsung di perangkat.\nKonsep Poster 1:1\nHeadline\nPIXELSTUDIO PRO\nEditor Gambar Offline Profesional\nTagline\nCepat • Praktis • 100% Offline\nFitur Unggulan\n✂️ Crop Gambar Presisi\n📐 Rasio 1:1, 4:3, 16:9, 9:16 & Custom (cm)\n🔄 Rotate, Zoom, Reset\n↩️ Undo & Redo\n🎨 Background Transparan, Putih & Gradient\n👀 Preview Sebelum Download\n🖼️ Riwayat Hasil Edit\n💾 Export PNG, JPG & WEBP\n🔒 Privasi Aman, Diproses di Perangkat\n🌐 Berjalan Langsung di Browser (Offline)\nKeunggulan\n✅ Tanpa Internet\n✅ Tanpa Instalasi\n✅ Ringan & Cepat\n✅ Responsive Desktop & Mobile\n✅ Data Tidak Keluar dari Perangkat\nCocok Untuk\nDigital Printing\nDesainer Grafis\nContent Creator\nFotografer\nUMKM\nPelajar & Mahasiswa","images":["https://i.ibb.co.com/Hfxw4nWT/10d9cec2b992.png"],"isBanner":true,"isVisible":true,"allowMultipleQty":false,"videoUrl":""},{"id":1785512074594,"name":"Broadcast Pelanggan Pro","category":"Aplikasi","price":"Rp 299.000","origPrice":"Rp 399.000","rating":"4.7","badge":"Hot","sold":"211","stockType":"tersedia","stockQty":"0","desc":"Broadcast Pelanggan Pro adalah aplikasi berbasis website offline yang membantu Anda mengelola data pelanggan dan melakukan pengiriman pesan WhatsApp secara massal melalui API provider pilihan. Dilengkapi dengan manajemen kontak, template pesan, import/export Excel, backup & restore database, serta pengaturan jeda pengiriman sehingga proses promosi, pemberitahuan, maupun layanan pelanggan menjadi lebih cepat, rapi, dan efisien.\n\nBroadcast Pelanggan Pro\nKelola Kontak & Kirim Pesan Massal Lebih Cepat dan Praktis\n🚀 Fitur Unggulan\n✅ Berjalan 100% Offline\n✅ Tanpa Instalasi & Tanpa Server\n✅ Manajemen Data Kontak Pelanggan\n✅ Import Kontak dari Excel\n✅ Export Data ke Excel\n✅ Backup & Restore Database JSON\n✅ Master Template Pesan\n✅ Multi Template Broadcast\n✅ Master Provider API WhatsApp\n✅ Pilih Provider Aktif\n✅ Broadcast ke Banyak Kontak Sekaligus\n✅ Pengaturan Jeda Pengiriman\n✅ Edit & Hapus Kontak dengan Mudah\n✅ Penyimpanan Data Menggunakan LocalStorage\n✅ Tampilan Modern, Ringan & Responsif\n\n🎯 Cocok Untuk\nDigital Printing\nToko Retail\nDistributor\nUMKM\nToko Online\nCustomer Service\nMarketing\nSales Promotion\n⭐ Keunggulan\nMempermudah pengelolaan database pelanggan.\nBroadcast pesan lebih cepat dan terorganisir.\nMendukung template pesan agar lebih efisien.\nData tersimpan aman di perangkat sendiri.\nTidak memerlukan internet untuk menjalankan aplikasi (internet hanya diperlukan saat mengirim melalui API WhatsApp). ","images":["https://i.ibb.co.com/tPppK8bm/5a524146ac1f.png"],"isBanner":true,"isVisible":true,"allowMultipleQty":false,"videoUrl":""},{"id":1785511818449,"name":"AI Print ERP Pro Ofline","category":"Aplikasi","price":"Rp 50.000","origPrice":"Rp 279.000","rating":"5.0","badge":"Best Seller","sold":"407","stockType":"tersedia","stockQty":"0","desc":"AI Print ERP Pro merupakan aplikasi ERP berbasis website offline yang dirancang khusus untuk membantu usaha percetakan dalam mengelola proses produksi. Mulai dari menghitung biaya cetak, mengelola data mesin, bahan, plat, finishing, membuat SPK, invoice, hingga backup dan ekspor database ke Excel. Seluruh data disimpan secara lokal menggunakan LocalStorage sehingga aplikasi dapat digunakan kapan saja tanpa membutuhkan internet maupun server.\n\nAI Print ERP Pro\nKelola Produksi Percetakan Lebih Cepat, Akurat, dan Profesional\n🚀 Fitur Unggulan\n✅ Berjalan 100% Offline (Tanpa Internet)\n✅ Tanpa Instalasi & Tanpa Server\n✅ Kalkulator HPP & Harga Jual Percetakan\n✅ Perhitungan Mesin Offset & Digital\n✅ Database Mesin, Plano, Plat, Bahan & Finishing\n✅ Kelola Riwayat Order Produksi\n✅ Cetak SPK Otomatis\n✅ Cetak Invoice Profesional\n✅ Backup & Restore Database\n✅ Auto Backup Riwayat Data\n✅ Import & Export Database Excel\n✅ Manajemen Versi Database\n✅ Penyimpanan Aman Menggunakan LocalStorage\n🎯 Cocok Untuk\nDigital Printing\nPercetakan Offset\nPercetakan Kemasan\nPercetakan Buku\nPercetakan Umum\nUsaha Grafika\n⭐ Keunggulan\nPerhitungan produksi lebih cepat dan minim kesalahan.\nSemua data tersimpan langsung di perangkat.\nTidak memerlukan koneksi internet.\nAntarmuka modern, ringan, dan mudah digunakan.\nMembantu menghitung biaya produksi hingga dokumen kerja secara otomatis. ","images":["https://i.ibb.co.com/gL2K8V3K/30ed23f615ab.png"],"isBanner":true,"isVisible":true,"allowMultipleQty":false},{"id":1785511316152,"name":"Lembur Pro Ofline","category":"Aplikasi","price":"Rp 144.000","origPrice":"Rp 200.000","rating":"4.0","badge":"Hot","sold":"13","stockType":"tersedia","stockQty":"0","desc":"Lembur Pro adalah aplikasi berbasis website offline yang dirancang untuk mempermudah pencatatan, pengelolaan, dan monitoring data lembur karyawan secara praktis. Seluruh data tersimpan langsung di perangkat menggunakan LocalStorage sehingga dapat digunakan tanpa internet maupun server. Aplikasi ini cocok untuk perusahaan, pabrik, percetakan, toko, UMKM, hingga instansi yang ingin mengelola lembur dengan lebih rapi dan profesional.\n\nLEMBUR PRO\nKelola Data Lembur Karyawan Jadi Lebih Mudah & Profesional\nFitur Unggulan\n✅ Berjalan 100% Offline\n✅ Tanpa Internet & Tanpa Server\n✅ Login Admin & Karyawan\n✅ Input Jam Masuk, Pulang & Istirahat\n✅ Perhitungan Durasi Lembur Otomatis\n✅ Riwayat Lembur Lengkap\n✅ Persetujuan (ACC) Lembur\n✅ Kelola Data Karyawan\n✅ Dashboard Statistik & Grafik\n✅ Export Excel\n✅ Backup & Restore Data JSON\n✅ Import Data Excel\n✅ Multi Perusahaan / Multi Lisensi\n✅ Hak Akses Super Admin & Admin\n✅ Data Aman Tersimpan di Perangkat\nTagline\nSolusi Praktis Manajemen Lembur Tanpa Ribet\nFooter\nCocok untuk Perusahaan • UMKM • Pabrik • Percetakan • Toko • Instansi","images":["https://i.ibb.co.com/b5kStTSL/10661e629498.png"],"isBanner":true,"isVisible":true,"allowMultipleQty":false,"videoUrl":""},{"id":1785510022763,"name":"N-Up Pro Offline","category":"Aplikasi","price":"Rp 57.000","origPrice":"Rp 200.000","rating":"5.0","badge":"Hot","sold":"91","stockType":"tersedia","stockQty":"0","desc":"N-Up Pro adalah aplikasi berbasis website offline yang dirancang untuk mempermudah proses penyusunan beberapa halaman PDF atau gambar ke dalam satu lembar cetak. Dilengkapi fitur N-Up, Booklet, pengaturan margin, bleed, crop mark, auto resize, serta preview hasil sebelum dicetak. Tidak memerlukan internet, server, maupun instalasi sehingga dapat langsung digunakan kapan saja di komputer atau laptop.\n\nN-Up Pro\nSolusi Praktis Mengatur Layout Cetak PDF & Gambar Secara Offline\nIsi Poster\nFitur Unggulan\n✅ Berjalan 100% Offline (Tanpa Internet)\n✅ Tanpa Instalasi & Tanpa Server\n✅ Import File PDF, JPG & PNG\n✅ Mode N-Up (2, 4, 6, 8, dst.)\n✅ Mode Booklet Otomatis\n✅ Pengaturan Margin Presisi\n✅ Bleed & Crop Mark\n✅ Auto Resize Kertas\n✅ Rotate 180° Baris Bawah\n✅ Preview Hasil Sebelum Export\n✅ Export ke PDF & JPG\n✅ Tampilan Modern & Responsif\nCocok Untuk\nPercetakan Digital\nFotokopi\nOffset Printing\nSekolah & Kampus\nPerkantoran\nPelaku Usaha Percetakan\nKeunggulan\nHemat waktu proses layout cetak.\nPresisi tinggi untuk kebutuhan produksi.\nMudah digunakan bahkan untuk pemula.\nSemua proses dilakukan langsung di browser secara offline.","images":["https://i.ibb.co.com/TqLjZ3CS/9ff85dacfbe2.png"],"isBanner":true,"isVisible":true,"allowMultipleQty":false,"videoUrl":""},{"id":1785506304355,"name":"Galeri Showcase Offline","category":"Aplikasi","price":"Rp 100.000","origPrice":"Rp 186.000","rating":"4.7","badge":"Hot","sold":"72","stockType":"tersedia","stockQty":"0","desc":"Galeri Showcase Offline\nTampilkan Profil Anggota Lebih Profesional & Menarik\n\nCocok untuk Sekolah • Kampus • Bimbel • Perusahaan • Komunitas • Organisasi\n\nFitur Unggulan\n✅ Berjalan 100% Offline (Tanpa Internet)\n✅ Tidak Perlu Hosting & Database\n✅ Data Tersimpan Otomatis di LocalStorage\n✅ Tema Tampilan Siap Pakai\n✅ Upload Logo & Background Sendiri\n✅ Kelola Foto Anggota dengan Mudah\n✅ Custom Ikon & Sponsor\n✅ Download Hasil Menjadi Gambar\n✅ Share Langsung ke Media Sosial\n✅ Responsive Desktop & Mobile\n✅ Semua Data Tersimpan di Satu File HTML\n\nFooter\nPraktis • Ringan • Siap Digunakan • Sekali Beli, Pakai Selamanya","images":["https://i.ibb.co.com/v4RYMSWD/69c0b55d7ea6.png"],"isBanner":true,"isVisible":true,"allowMultipleQty":false},{"id":1785341744639,"name":"Cicilan Pro","category":"Aplikasi","price":"Rp 57.000","origPrice":"Rp 110.000","rating":"4.3","badge":"Hot","sold":"27","stockType":"tersedia","stockQty":"0","desc":"Cicilan Pro\n\nKelola seluruh cicilan Anda dengan lebih mudah, rapi, dan aman dalam satu aplikasi. Cocok untuk mencatat cicilan kendaraan, elektronik, pinjaman pribadi, kartu kredit, hingga berbagai jenis angsuran lainnya.\n\nKeunggulan Utama\n\n- ✅ Berjalan 100% Offline tanpa koneksi internet.\n- ✅ Data tersimpan langsung di perangkat sehingga lebih aman dan privat.\n- ✅ Dashboard informatif untuk melihat total cicilan, tagihan, pembayaran, dan sisa kewajiban.\n- ✅ Pengingat jatuh tempo agar tidak terlambat membayar.\n- ✅ Pantau progres pembayaran secara real-time.\n- ✅ Filter dan pencarian data yang cepat.\n- ✅ Riwayat cicilan tersusun rapi.\n- ✅ Laporan dapat diekspor ke format Excel (XLSX).\n- ✅ Tampilan modern, ringan, dan mudah digunakan.\n\nCocok Digunakan Untuk\n\n- Kredit Motor & Mobil\n- Kredit HP & Laptop\n- Kredit Peralatan Elektronik\n- Pinjaman Pribadi\n- Kartu Kredit\n- Cicilan Furniture\n- Dan berbagai jenis cicilan lainnya.\n\nMengapa Memilih Cicilan Pro?\n\nDengan sistem offline, Anda tetap dapat menggunakan seluruh fitur kapan saja tanpa internet. Tidak perlu khawatir kehilangan akses saat jaringan bermasalah. Data tetap aman di perangkat Anda, aplikasi berjalan cepat, ringan, dan tanpa biaya langganan bulanan.\n\nCicilan Pro membantu Anda mengatur keuangan lebih disiplin, menghindari keterlambatan pembayaran, serta memantau seluruh cicilan dalam satu aplikasi yang praktis dan mudah digunakan.","images":["https://i.ibb.co.com/whq4WVR3/220c4d86910a.png"],"isBanner":true,"isVisible":true,"allowMultipleQty":false,"videoUrl":""},{"id":1785257374536,"name":"Kasir Offline","category":"Aplikasi","price":"Rp 100.000","origPrice":"Rp 350.000","rating":"5.0","badge":"Best Seller","sold":"371","stockType":"tersedia","stockQty":"0","desc":"Aplikasi ini cocok untuk toko, minimarket, percetakan, konter HP, cafe, laundry, dan berbagai jenis usaha lainnya.\n\n✅ 100% Offline (tanpa internet) \n✅ Tanpa server & hosting \n✅ Tanpa biaya berlangganan \n✅ Responsive Desktop & Mobile \n✅ Data tersimpan otomatis di perangkat Anda \n✅ Akun Admin & Kasir \n✅ Laporan, stok, invoice, backup & masih banyak fitur lainnya.","images":["https://i.ibb.co.com/rRp2byC8/5a3db5420b99.png","https://i.ibb.co.com/spXNmnN7/f6ddcadf3ef5.png","https://i.ibb.co.com/cSwGNRN5/81abf8ce6932.jpg","https://i.ibb.co.com/Myddw03G/efd912f3d9be.jpg","https://i.ibb.co.com/qMfz057G/eca59e8d4af6.png","https://i.ibb.co.com/PZGRgsbX/a346ae8e4f94.png","https://i.ibb.co.com/HfyNvQM7/c47797660f0c.jpg","https://i.ibb.co.com/4ZbNp5ZZ/7bb34b01ad84.jpg"],"isBanner":true,"isVisible":true,"allowMultipleQty":false,"videoUrl":"https://youtu.be/vGLTuvnGRvk?si=JTWOteVuXrQhmcuZ"}];
-        let profile = {"name":"CodeOn Apps","email":"appscodeon@gmail.com","status":"Aktif","initial":"CO","logo":"https://i.ibb.co.com/d0nc2gJc/a01be39194f1.png","whatsapp":"085172288904","logoOriginal":"https://i.ibb.co.com/XfFGw0jN/b2fd6e58430e.png","logoCropData":{"x":-44.1772485403416,"y":-49.23822694032327,"width":1265.4599759081045,"height":843.8163789058349,"rotate":0,"scaleX":1,"scaleY":1},"description":"CodeOn Apps menyediakan aplikasi bisnis, aplikasi kasir offline, source code website, QRIS, dan berbagai produk digital.\nFitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai selamanya!","faviconUrl":"https://i.ibb.co.com/CKP5bw79/696c25a17157.png","tagline":"Source Code Digital & Aplikasi ","domainUrl":"https://codeonapps.github.io","gaId":"G-86C3FJ9CKD","defaultTheme":"dark","payWA":true,"payTransfer":true,"qrisRaw":"00020101021126690021ID.CO.BANKMANDIRI.WWW01189360000801363657770211713636577750303UKE51440014ID.CO.QRIS.WWW0215ID10232808795950303UKE5204274153033605802ID5920Digital Printing IND6015Indramayu (Kab)61054527462070703A0163041E93","payQRIS":true,"socials":[{"icon":"fa-youtube","url":"https://youtube.com/@codeonapps"},{"icon":"fa-tiktok","url":"https://tiktok.com/@codeonapps"},{"icon":"fa-facebook","url":"https://www.facebook.com/@codeonapps"}],"footerText":"CodeOn Apps","isLandingPage":false,"showBannerSection":true,"showTestiSection":true,"creatorName":"Ridwan","creatorUrl":"https://digitalprintingind.github.io","address":"","colorTheme":"midnight","hideStoreName":false,"testiPlacement":"after_banner","faviconOriginal":"https://i.ibb.co.com/XfFGw0jN/b2fd6e58430e.png","faviconCropData":{"x":-30.443811566384014,"y":-251.19913555708683,"width":1240.1245910320804,"height":1240.1245910320804,"rotate":0,"scaleX":1,"scaleY":1}};
-        let banners = [{"id":"1787786196815","label":"Description","title":"About Me","desc":"CodeOn Apps menyediakan aplikasi bisnis, aplikasi kasir offline, source code website, QRIS, dan berbagai produk digital.\nFitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai selamanya!","images":["https://i.ibb.co.com/XfFGw0jN/b2fd6e58430e.png"]}];
+        let profile = {"name":"CodeOn Apps","email":"appscodeon@gmail.com","status":"Aktif","initial":"CO","logo":"https://i.ibb.co.com/MkvtPKcc/88cfef1d6166.png","whatsapp":"085172288904","logoOriginal":"https://i.ibb.co.com/N65sDsZJ/2e8f1fc099aa.png","logoCropData":{"x":-135.41298983753924,"y":-75.65830397262184,"width":3409.599731821582,"height":759.2108845207388,"rotate":0,"scaleX":1,"scaleY":1},"description":"CodeOn Apps menyediakan aplikasi bisnis, aplikasi kasir offline, source code website, QRIS, dan berbagai produk digital.\nFitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai selamanya!","faviconUrl":"https://i.ibb.co.com/PvfCKk8p/b059e47e9b47.png","tagline":"Source Code Digital & Aplikasi ","domainUrl":"https://codeonapps.github.io","gaId":"G-86C3FJ9CKD","defaultTheme":"neon","payWA":true,"payTransfer":true,"qrisRaw":"00020101021126690021ID.CO.BANKMANDIRI.WWW01189360000801363657770211713636577750303UKE51440014ID.CO.QRIS.WWW0215ID10232808795950303UKE5204274153033605802ID5920Digital Printing IND6015Indramayu (Kab)61054527462070703A0163041E93","payQRIS":true,"socials":[{"icon":"fa-youtube","url":"https://youtube.com/@codeonapps"},{"icon":"fa-tiktok","url":"https://tiktok.com/@codeonapps"},{"icon":"fa-facebook","url":"https://www.facebook.com/@codeonapps"}],"footerText":"CodeOn Apps","isLandingPage":false,"showBannerSection":true,"showTestiSection":true,"creatorName":"Ridwan","creatorUrl":"https://digitalprintingind.github.io","address":"","colorTheme":"midnight","hideStoreName":true,"testiPlacement":"after_banner","faviconOriginal":"https://i.ibb.co.com/rfGNFpcW/7941a9b5faa0.png","faviconCropData":{"x":-79.53799312957426,"y":-174.0184825441929,"width":1597.9226069951326,"height":1597.9226069951326,"rotate":0,"scaleX":1,"scaleY":1}};
+        let banners = [{"id":"1787786196815","label":"Description","title":"About Me","desc":"CodeOn Apps menyediakan aplikasi bisnis, aplikasi kasir offline, source code website, QRIS, dan berbagai produk digital.\nFitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai selamanya!","images":["https://i.ibb.co.com/rfGNFpcW/7941a9b5faa0.png"]}];
         let testimonials = [{"id":1785934807388,"name":"Maya","message":"Jarang nemu developer lokal yang jual produk sebagus ini dengan harga miring. Fiturnya sekelas aplikasi premium. Jangan ragu beli di sini! 😍","isVisible":true},{"id":1785934775297,"name":"Koperasi Warga","message":"Sistem pendataan jadi lebih rapi sejak pakai aplikasi dari CodeOn. Laporan bulanannya detail banget dan bisa langsung di-export.","isVisible":true},{"id":1785934748087,"name":"Denny","message":"Aplikasinya minim error. Kemarin ada kendala cetak struk thermal, lapor ke admin langsung dikasih panduan setting printernya hari itu juga. Keren! 🚀","isVisible":true},{"id":1785934714713,"name":"Optik Sejahtera","message":"Sudah coba banyak aplikasi kasir, tapi ini yang paling pas di hati. Tanpa langganan bulanan, beli sekali pakai selamanya. Sangat hemat.","isVisible":true},{"id":1785934681344,"name":"Siska","message":"Proses order via WA-nya cepet. Adminnya ramah dan ngasih solusi yang pas buat kebutuhan pembukuan toko baju saya. ✨","isVisible":true},{"id":1785934650113,"name":"Reza Fahlevi","message":"Beli script di sini gak pernah ngecewain. Kodenya bersih (clean code) dan gampang dimodifikasi lagi buat project kampus. Thank you!","isVisible":true},{"id":1785934619589,"name":"Kang Mus (Warkop)","message":"Mantul! Transaksi jadi lebih cepet. Yang paling penting database aman karena tersimpan offline di PC kita sendiri. 💯","isVisible":true},{"id":1785934583545,"name":"H. Rohman","message":"Lembur Pro ngebantu banget buat ngurus absen dan lembur karyawan pabrik saya. Hitungannya akurat, gak perlu repot pakai Excel lagi.","isVisible":true},{"id":1785934544116,"name":"Dina Lestari","message":"Suka banget sama desain UI aplikasinya, rapi dan modern. Klien saya juga puas sama hasilnya. Nanti pasti order produk digital yang lain.","isVisible":true},{"id":1785934503402,"name":"Fajar Setiawan","message":"Checkout gampang, akses file langsung dikirim. Gak pake ribet nunggu lama. Aplikasinya juga ringan pas dijalankan di laptop jadul. 💻","isVisible":true},{"id":1785934440682,"name":"Toko Berkah","message":"Harga sangat terjangkau untuk fitur selengkap ini. Udah dipakai seminggu di minimarket dan gak ada bug sama sekali. Recommended!","isVisible":true},{"id":1785934410829,"name":"Andi Wijaya","message":"Adminnya fast respon banget! Kemarin ada kendala pas setting awal, langsung dipandu via WA sampai tuntas. Pelayanan bintang 5 ⭐⭐⭐⭐⭐","isVisible":true},{"id":1785934378838,"name":"CV. Maju Bersama","message":"Fitur QRIS offline-nya juara. Sangat fungsional dan UI-nya juga responsif. Sukses terus buat developernya. 🔥\"","isVisible":true},{"id":"1785934338294","name":"Rina Amelia","message":"Awalnya ragu beli source code di sini, ternyata panduannya super lengkap. tanpa Instalasi gampang banget buat pemula. Terima kasih CodeOn!","isVisible":true},{"id":1785934079784,"name":"Budi Santoso","message":"Aplikasi kasir offline-nya beneran ngebantu warung saya. Gak perlu mikir kuota internet lagi buat rekap jualan tiap hari. Mantap mas! 👍","isVisible":true}];
         let adsData = [];
         // --- DATA DB END ---
@@ -1885,228 +2025,113 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
             }
         }
 
-        // =========================================================================
-        // --- ADMIN FUNCTIONS START ---
-        // =========================================================================
-
-        
-
-        async function exportCloneApp() {
-            try {
-                showToast('Mempersiapkan Clone App...', 'success');
-                
-                const response = await fetch(window.location.href);
-                let htmlCode = await response.text();
-
-                const docTypeMatch = htmlCode.match(/<!DOCTYPE html>/i);
-                if (docTypeMatch) {
-                    htmlCode = htmlCode.substring(docTypeMatch.index);
-                }
-                
-                const storeName = profile.name || "CodeOn";
-                const storeTagline = profile.tagline || "";
-                const fullTitle = storeTagline ? `${storeName} | ${storeTagline}` : storeName;
-                const storeDesc = profile.description || `${profile.name}`;
-                const storeLogo = profile.logo || "https://via.placeholder.com/500";
-                
-                const currentDomain = profile.domainUrl ? profile.domainUrl : window.location.origin; 
-
-                htmlCode = htmlCode.replace(/<title id="appTitle">.*?<\/title>/, `<title id="appTitle">${fullTitle}</title>`);
-                htmlCode = htmlCode.replace(/<meta name="description" id="metaDesc" content=".*?">/, `<meta name="description" id="metaDesc" content="${storeDesc}">`);
-                htmlCode = htmlCode.replace(/<meta property="og:title" id="ogTitle" content=".*?">/, `<meta property="og:title" id="ogTitle" content="${fullTitle}">`);
-                htmlCode = htmlCode.replace(/<meta property="og:description" id="ogDesc" content=".*?">/, `<meta property="og:description" id="ogDesc" content="${storeDesc}">`);
-                htmlCode = htmlCode.replace(/<meta property="og:image" id="ogImage" content=".*?">/, `<meta property="og:image" id="ogImage" content="${storeLogo}">`);
-                htmlCode = htmlCode.replace(/<link rel="canonical" href=".*?">/, `<link rel="canonical" href="${currentDomain}/">`);
-                htmlCode = htmlCode.replace(/<meta property="og:url" id="ogUrl" content=".*?">/, `<meta property="og:url" id="ogUrl" content="${currentDomain}/">`);
-                htmlCode = htmlCode.replace(/<meta property="og:site_name" content=".*?">/, `<meta property="og:site_name" content="${storeName}">`);
-                
-                // 1. Ubah teks "Memuat Toko..." menjadi nama toko user saja
-                htmlCode = htmlCode.replace(/<h2 id="splashStoreName"[^>]*>.*?<\/h2>/, `<h2 id="splashStoreName" class="font-extrabold text-lg sm:text-xl text-white tracking-wider mb-3">${storeName}</h2>`);
-                
-                // 2. Ubah ikon permata animasi menjadi logo toko user (Jika ada logo)
-                if (profile.logo) {
-                    const splashLogoRegex = /<div class="relative w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-tr from-brand-600 to-indigo-500 rounded-2xl flex items-center justify-center text-white shadow-2xl shadow-brand-500\/50 mb-6 transform animate-bounce">[\s\S]*?<\/div>/;
-                    const newSplashLogo = `
-                    <div class="relative h-20 sm:h-24 flex items-center justify-center mb-6 transform animate-bounce overflow-visible">
-                        <img src="${storeLogo}" class="h-full w-auto max-w-[200px] object-contain drop-shadow-[0_15px_25px_rgba(139,92,246,0.6)]">
-                    </div>`;
-                    htmlCode = htmlCode.replace(splashLogoRegex, newSplashLogo);
-                }
-                
-                const websiteRegex = /<script type="application\/ld\+json">\s*\{\s*"@context":\s*"https:\/\/schema\.org",\s*"@type":\s*"WebSite"[\s\S]*?<\/script>/;
-                const newWebSiteScript = `<script type="application/ld+json">\n    {\n      "@context": "https://schema.org",\n      "@type": "WebSite",\n      "name": "${storeName}",\n      "url": "${currentDomain}/",\n      "potentialAction": {\n        "@type": "SearchAction",\n        "target": "${currentDomain}/?q={search_term_string}",\n        "query-input": "required name=search_term_string"\n      }\n    }\n    <\/script>`;
-                htmlCode = htmlCode.replace(websiteRegex, () => newWebSiteScript);
-
-                htmlCode = htmlCode.replace(/<link id="appFavicon" rel="icon" type="image\/svg\+xml" href='.*?'>/, `<link rel="icon" type="image/x-icon" href="favicon.ico">\n    <link rel="shortcut icon" href="favicon.ico">\n    <link rel="apple-touch-icon" href="favicon.ico">`);
-
-                if (profile.gaId) {
-                    htmlCode = htmlCode.replace(/G-[A-Z0-9]{8,15}/g, profile.gaId);
-                }
-
-                const productsToClone = products.filter(p => p.isVisible !== false);
-                const bannersToClone = banners.filter(b => b.isVisible !== false);
-                const dbProducts = JSON.stringify(productsToClone).replace(/</g, '\\u003c');
-                const dbProfile = JSON.stringify(profile).replace(/</g, '\\u003c');
-                const dbBanners = JSON.stringify(bannersToClone).replace(/</g, '\\u003c');
-                const testimonialsToClone = testimonials.filter(t => t.isVisible !== false);
-                const dbTestimonials = JSON.stringify(testimonialsToClone).replace(/</g, '\\u003c');
-                const adsToClone = (typeof adsData !== 'undefined' ? adsData : []).filter(a => a.isVisible !== false);
-                const dbAds = JSON.stringify(adsToClone).replace(/</g, '\\u003c');
-
-                // --- PENYEMPURNAAN SCHEMA JSON-LD UNTUK MENCEGAH ERROR GSC ---
-                const schemaProducts = productsToClone.map((p, index) => {
-                    let numPrice = String(p.price || 0).replace(/[^0-9]/g, '');
-                    
-                    let itemData = {
-                        "@type": "Product",
-                        "sku": p.id.toString(),
-                        "name": p.name,
-                        "image": p.images.length > 0 ? p.images : ["https://via.placeholder.com/500"],
-                        "description": p.desc,
-                        "brand": {
-                            "@type": "Brand",
-                            "name": storeName
-                        },
-                        "aggregateRating": {
-                            "@type": "AggregateRating",
-                            "ratingValue": p.rating || "5.0",
-                            "reviewCount": (parseInt(p.sold || 0) > 0 ? String(p.sold) : "1")
-                        }
-                    };
-
-                    // PENCEGAHAN ERROR GSC: Hapus meta 'offers/harga' jika Mode Landing Page aktif
-                    if (!profile.isLandingPage) {
-                        itemData.offers = {
-                            "@type": "Offer",
-                            "priceCurrency": "IDR",
-                            "price": numPrice || "0",
-                            "availability": "https://schema.org/InStock",
-                            "url": currentDomain + "/?product=" + p.id,
-                            "hasMerchantReturnPolicy": {
-                                "@type": "MerchantReturnPolicy",
-                                "applicableCountry": "ID",
-                                "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-                            },
-                            "shippingDetails": {
-                                "@type": "OfferShippingDetails",
-                                "shippingRate": {
-                                    "@type": "MonetaryAmount",
-                                    "value": "0",
-                                    "currency": "IDR"
-                                },
-                                "shippingDestination": {
-                                    "@type": "DefinedRegion",
-                                    "addressCountry": "ID"
-                                },
-                                "deliveryTime": {
-                                    "@type": "ShippingDeliveryTime",
-                                    "handlingTime": {
-                                        "@type": "QuantitativeValue",
-                                        "minValue": 0,
-                                        "maxValue": 0,
-                                        "unitCode": "DAY"
-                                    },
-                                    "transitTime": {
-                                        "@type": "QuantitativeValue",
-                                        "minValue": 0,
-                                        "maxValue": 1,
-                                        "unitCode": "DAY"
-                                    }
-                                }
-                            }
-                        };
-                    }
-
-                    return {
-                        "@type": "ListItem",
-                        "position": index + 1,
-                        "item": itemData
-                    };
-                });
-
-                const schemaItemList = {
-                    "@context": "https://schema.org",
-                    "@type": "ItemList",
-                    "itemListElement": schemaProducts
-                };
-
-                const schemaScript = `\n    <!-- GOOGLE BOT PRODUCT CATALOG -->\n    <script type="application/ld+json">\n    ${JSON.stringify(schemaItemList, null, 2)}\n    <` + `/script>\n`;
-                // ==============================================================
-
-                const dataBlockRegex = /\/\/ --- DATA DB START ---[\s\S]*?\/\/ --- DATA DB END ---/;
-                const newDataBlock = `// --- DATA DB START ---\n        let products = ${dbProducts};\n        let profile = ${dbProfile};\n        let banners = ${dbBanners};\n        let testimonials = ${dbTestimonials};\n        let adsData = ${dbAds};\n        // --- DATA DB END ---`;
-                htmlCode = htmlCode.replace(dataBlockRegex, () => newDataBlock);
-
-                const credRegex = /\/\/ --- CREDENTIALS START ---[\s\S]*?\/\/ --- CREDENTIALS END ---/;
-                htmlCode = htmlCode.replace(credRegex, 'let adminCredentials = {username: "", password: ""};');
-
-                const adminModalsRegex = /<!-- ADMIN MODALS START -->[\s\S]*?<!-- ADMIN MODALS END -->/;
-                htmlCode = htmlCode.replace(adminModalsRegex, '');
-
-                htmlCode = htmlCode.replace(/let isAdminLoggedIn = .*?;/, 'let isAdminLoggedIn = false;');
-                htmlCode = htmlCode.replace(/\/\/ --- AUTH BUTTON START ---[\s\S]*?\/\/ --- AUTH BUTTON END ---/g, "document.getElementById('authButtonContainer').innerHTML = '';");
-                htmlCode = htmlCode.replace(/\/\/ --- ADMIN TAB START ---[\s\S]*?\/\/ --- ADMIN TAB END ---/g, "");
-
-                const adminFuncRegex = /\/\/ ===[\s\S]*?\/\/ --- ADMIN FUNCTIONS START ---[\s\S]*?\/\/ --- ADMIN FUNCTIONS END ---[\s\S]*?\/\/ ===/;
-                htmlCode = htmlCode.replace(adminFuncRegex, '// FITUR ADMIN TELAH DIHAPUS SECARA PERMANEN DARI CLONE INI UNTUK KEAMANAN.');
-
-                // --- MENCEGAH CLONE APP MENGAMBIL CACHE LAMA DARI BROWSER ---
-                const cleanCacheRegex = /let dbProd = await loadVar\(prefix \+ 'products'\);[\s\S]*?let dbTesti = await loadVar\(prefix \+ 'testimonials'\); testimonials = dbTesti \|\| \[\];/g;
-                htmlCode = htmlCode.replace(cleanCacheRegex, '// Data Master dimuat statis dari file Clone (Offline Ready)');
-                
-                // Menghapus fungsi Multi-Toko agar tidak muncul/error di Clone App
-                const multiStoreRegex = /\/\/ --- MULTI-STORE FUNCTIONS START ---[\s\S]*?\/\/ --- MULTI-STORE FUNCTIONS END ---/g;
-                htmlCode = htmlCode.replace(multiStoreRegex, '');
-
-                const splitIndex = htmlCode.indexOf('<body');
-                
-                const faviconLinkComment = `\n    <!-- ============================================== -->\n    <!-- LINK DOWNLOAD FAVICON IMGBB: ${profile.faviconUrl || 'BELUM ADA LOGO'} -->\n    <!-- Buka link di atas, download, lalu ubah nama jadi favicon.ico -->\n    <!-- ============================================== -->\n`;
-                
-                // --- GENERATE SITEMAP.XML TEXT (DENGAN LASTMOD & CHANGEFREQ) ---
-                const today = new Date().toISOString().split('T')[0];
-                let sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
-                
-                // Url Utama (Homepage) selalu pakai hari ini karena sering berubah (banner, testi, dll)
-                sitemapContent += `  <url>\n    <loc>${currentDomain}/</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>daily</changefreq>\n    <priority>1.0</priority>\n  </url>\n`;
-                
-                // Url Produk menggunakan tanggal edit terakhir atau tanggal pembuatan (dari id)
-                productsToClone.forEach(p => {
-                    // Gunakan lastModDate jika ada, jika tidak gunakan p.id (waktu pembuatan), fallback ke waktu sekarang
-                    const modTimestamp = p.lastModDate || Number(p.id) || Date.now();
-                    const productLastMod = new Date(modTimestamp).toISOString().split('T')[0]; // Format ke YYYY-MM-DD
-                    
-                    sitemapContent += `  <url>\n    <loc>${currentDomain}/?product=${p.id}</loc>\n    <lastmod>${productLastMod}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>\n`;
-                });
-                sitemapContent += `</urlset>`;
-
-                const sitemapLinkComment = `\n    <!-- ============================================== -->\n    <!-- KODE SITEMAP.XML OTOMATIS -->\n    <!-- Buat file baru bernama sitemap.xml, lalu COPAS kode di bawah ini: -->\n<!--\n${sitemapContent}\n-->\n    <!-- ============================================== -->\n`;
-
-                // GABUNGKAN HEAD MENTAH DENGAN SCRIPT KATALOG PRODUK
-                const headPart = htmlCode.substring(0, splitIndex) + faviconLinkComment + sitemapLinkComment + schemaScript;
-                const bodyPart = htmlCode.substring(splitIndex);
-
-                // Gabung langsung tanpa enkripsi agar tidak blank
-                htmlCode = headPart + bodyPart;
-
-                const blob = new Blob([htmlCode], { type: 'text/html' });
-                const url = URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
-                
-                // Atur nama file sesuai mode
-                const namaToko = document.getElementById('headerStoreName').innerText.replace(/\s+/g, '');
-                const modeToko = profile.isLandingPage ? 'Landing' : 'Normal';
-                a.download = `${namaToko}_Mode${modeToko}_CloneApp.html`;
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                URL.revokeObjectURL(url);
-                
-                showToast('Clone App aman berhasil diunduh!', 'success');
-            } catch (error) {
-                console.error(error);
-                showToast('Gagal memproses Clone. Pastikan file ini dijalankan via Localhost/Live Server.', 'error');
+        // Fungsi membaca CSV (mendukung baris baru/enter di dalam teks)
+        function parseCSV(str) {
+            let arr = []; let quote = false; let row = 0; let col = 0;
+            for (let c = 0; c < str.length; c++) {
+                let cc = str[c], nc = str[c+1];
+                arr[row] = arr[row] || []; arr[row][col] = arr[row][col] || '';
+                if (cc == '"' && quote && nc == '"') { arr[row][col] += cc; ++c; continue; }
+                if (cc == '"') { quote = !quote; continue; }
+                if (cc == ',' && !quote) { ++col; continue; }
+                if (cc == '\r' && nc == '\n' && !quote) { ++row; col = 0; ++c; continue; }
+                if (cc == '\n' && !quote) { ++row; col = 0; continue; }
+                if (cc == '\r' && !quote) { ++row; col = 0; continue; }
+                arr[row][col] += cc;
             }
+            return arr;
+        }
+
+        // Format teks agar aman di Excel
+        function escapeCSV(val) {
+            if (val === null || val === undefined) return '""';
+            return '"' + String(val).replace(/"/g, '""') + '"';
+        }
+
+        // Cek apakah gambar berupa Base64
+        function isBase64Image(str) {
+            return typeof str === 'string' && str.startsWith('data:image');
+        }
+
+        function exportSectionData(type) {
+            let data = [];
+            let csvContent = "";
+            
+            if (type === 'testi') {
+                data = testimonials;
+                csvContent += "id,name,message,isVisible\n";
+                data.forEach(t => {
+                    csvContent += `${escapeCSV(t.id)},${escapeCSV(t.name)},${escapeCSV(t.message)},${escapeCSV(t.isVisible)}\n`;
+                });
+            } else if (type === 'banner') {
+                data = banners;
+                csvContent += "id,label,title,desc,image,isVisible\n";
+                data.forEach(b => {
+                    let img = (b.images && b.images.length > 0) ? b.images[0] : (b.image || "");
+                    if (isBase64Image(img)) img = ""; // Kosongkan jika Base64
+                    csvContent += `${escapeCSV(b.id)},${escapeCSV(b.label)},${escapeCSV(b.title)},${escapeCSV(b.desc)},${escapeCSV(img)},${escapeCSV(b.isVisible)}\n`;
+                });
+            } else if (type === 'ads') {
+                data = adsData;
+                csvContent += "id,url,placement,image,isVisible\n";
+                data.forEach(a => {
+                    let img = a.image || "";
+                    if (isBase64Image(img)) img = ""; // Kosongkan jika Base64
+                    csvContent += `${escapeCSV(a.id)},${escapeCSV(a.url)},${escapeCSV(a.placement)},${escapeCSV(img)},${escapeCSV(a.isVisible)}\n`;
+                });
+            }
+            
+            // Tambahkan BOM agar Emoji terbaca normal di Microsoft Excel
+            const blob = new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a'); a.href = url; a.download = `backup_${type}.csv`;
+            document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(url);
+            showToast(`Data ${type} diekspor ke Excel (CSV)!`, 'success');
+        }
+
+        function importSectionData(event, type) {
+            const file = event.target.files[0]; if (!file) return;
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                try {
+                    const csvData = parseCSV(e.target.result);
+                    if (csvData.length < 2) throw new Error("Data kosong");
+                    
+                    const headers = csvData[0].map(h => h.trim());
+                    let newData = [];
+                    
+                    for (let i = 1; i < csvData.length; i++) {
+                        let row = csvData[i];
+                        if (row.length === 1 && row[0].trim() === "") continue; 
+                        
+                        let obj = {};
+                        headers.forEach((header, index) => {
+                            let val = row[index] || "";
+                            if (val === "true") val = true;
+                            if (val === "false") val = false;
+                            if (header === 'id' && !isNaN(val)) val = Number(val);
+                            obj[header] = val;
+                        });
+                        
+                        if (type === 'banner') {
+                            if(obj.image) obj.images = [obj.image];
+                            else obj.images = [];
+                        }
+                        newData.push(obj);
+                    }
+                    
+                    if (type === 'testi') { testimonials = newData; renderTestiList(); }
+                    else if (type === 'banner') { banners = newData; renderBannerList(); }
+                    else if (type === 'ads') { adsData = newData; renderAdsList(); }
+                    
+                    saveData(); 
+                    if (currentTab === 'home') { renderMainContent(); initBannerSlider(); initTestiSlider(); initAdSliders(); }
+                    showToast(`Data ${type} berhasil diimpor!`, 'success');
+                } catch(err) { 
+                    showToast('Format file Excel (CSV) tidak valid!', 'error'); 
+                }
+            };
+            reader.readAsText(file); event.target.value = '';
         }
 
         function formatCurrencyInput(input) {
@@ -2583,8 +2608,8 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
                     const ctx = canvas.getContext('2d');
                     ctx.drawImage(img, 0, 0, width, height);
 
-                    // Konversi ke format JPEG dengan kualitas terkompresi
-                    const compressedBase64 = canvas.toDataURL('image/jpeg', quality);
+					// Ubah image/jpeg menjadi image/webp
+					const compressedBase64 = canvas.toDataURL('image/webp', quality);
                     callback(compressedBase64);
                 };
             }
@@ -3462,7 +3487,7 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
             localStorage.removeItem('lux_user_color'); 
             
             initTheme();
-            const modeNames = { 'dark': 'Nuansa Gelap', 'light': 'Nuansa Terang', 'sepia': 'Nuansa Senja', 'oled': 'Nuansa Monokrom', 'cosmic': 'Nuansa Kaca', 'forest': 'Nuansa Alam', 'ocean': 'Nuansa Laut', 'sunset': 'Nuansa Kopi', 'lavender': 'Nuansa Pastel', 'neon': 'Nuansa Soft 3D' };
+            const modeNames = { 'dark': 'Nuansa Gelap', 'neon': 'Nuansa Soft 3D', 'softui': 'Tema Soft UI' };
             showToast(`Tema Latar ${modeNames[mode]} Aktif`, 'success');
         }
 
@@ -3470,8 +3495,8 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
             // Baca murni dari profil toko saat ini
             const finalTheme = (typeof profile !== 'undefined' && profile.defaultTheme) ? profile.defaultTheme : (savedThemeStr || 'dark');
             
-            // Bersihkan SEMUA class tema latar (ada 10 sekarang)
-            document.body.classList.remove('theme-dark', 'theme-light', 'theme-sepia', 'theme-oled', 'theme-cosmic', 'theme-forest', 'theme-ocean', 'theme-sunset', 'theme-lavender', 'theme-neon');
+            // Bersihkan class tema latar
+            document.body.classList.remove('theme-dark', 'theme-neon', 'theme-softui');
             
             // Pasang class latar yang terpilih
             if(finalTheme) document.body.classList.add('theme-' + finalTheme);
@@ -4384,20 +4409,6 @@ Fitur lengkap, aman, dan 100% tanpa biaya langganan bulanan. Beli sekali, pakai 
                                         </div>
                                         <i class="fa-solid fa-chevron-right text-slate-500 text-xs sm:text-sm group-hover:text-brand-400 transition transform group-hover:translate-x-1"></i>
                                     </div>
-                                    
-                                    ${isAdminLoggedIn ? `
-                                    <div class="bg-slate-800/80 p-3 sm:p-4 rounded-2xl border border-slate-700/50 flex items-center justify-between group hover:border-indigo-500/50 hover:bg-slate-800 transition cursor-pointer" onclick="openAdminProfileModal()">
-                                        <div class="flex items-center gap-3">
-                                            <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-base sm:text-lg group-hover:scale-110 transition-transform">
-                                                <i class="fa-solid fa-user-pen"></i>
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <span class="text-white text-[11px] sm:text-sm font-semibold">Pengaturan Toko</span>
-                                                <span class="text-slate-400 text-[9px] sm:text-[10px]">Ubah Logo & Data Akun</span>
-                                            </div>
-                                        </div>
-                                        <i class="fa-solid fa-chevron-right text-slate-500 text-xs sm:text-sm group-hover:text-indigo-400 transition transform group-hover:translate-x-1"></i>
-                                    </div>` : ''}
                                 </div>
                             </div>
                         </div>
